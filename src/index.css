@@ -60,36 +60,44 @@
 .meteor-piece {
   position: absolute;
   user-select: none;
-  will-change: transform;
+  will-change: transform, filter;
+  transition: filter 0.6s ease-in-out;
+  mix-blend-mode: screen;
+}
+
+/* Default/Dark Mode Filters */
+.dark .meteor-piece {
+  filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 20px rgba(255, 170, 50, 0.5));
+}
+
+/* Light Mode Filters */
+.meteor-piece {
+  filter: brightness(0.95) saturate(1.4) contrast(1.2);
 }
 
 .meteor-piece-lg {
-  right: -1%;
-  top: 19%;
-  width: 96%;
-  max-width: 720px;
-  object-fit: cover;
-  object-position: 58% 60%;
-  animation: meteorFloatSlow 6.8s ease-in-out infinite;
+  right: -5%;
+  top: 15%;
+  width: 80%;
+  max-width: 640px;
+  object-fit: contain;    
+  animation: meteorFloatSlow 8s ease-in-out infinite;
 }
 
 .meteor-piece-sm {
-  width: 30%;
-  max-width: 190px;
-  object-fit: cover;
-  object-position: center;
-  animation: meteorFloatFast 5.1s ease-in-out infinite;
+  width: 25%;
+  max-width: 220px;
+  object-fit: contain;
+  animation: meteorFloatFast 6s ease-in-out infinite;
 }
 
 .meteor-piece-sm-top {
-  left: 14%;
-  top: 10%;
-  object-position: 16% 7%;
+  left: 10%;
+  top: 8%;
 }
 
 .meteor-piece-sm-upper {
-  left: 34%;
-  top: 13%;
-  object-position: 36% 9%;
+  left: 30%;
+  top: 12%;
   animation-delay: 0.9s;
 }

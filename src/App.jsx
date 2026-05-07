@@ -6,8 +6,7 @@ import { Orbit } from 'lucide-react';
 import lightBg from './assets/background/light-bg.png';
 import darkBg from './assets/background/dark-bg.png';
 import earthIcon from './assets/icons/earth.png';
-import darkMeteor from './assets/meteors/dark-mt.png';
-import lightMeteor from './assets/meteors/white-mt.png';
+import meteorImg from './assets/meteors/meteor.png';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,7 +26,7 @@ function App() {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
-  const meteorImage = theme === 'dark' ? darkMeteor : lightMeteor;
+  const meteorImage = meteorImg;
 
   return (
     <main className="relative min-h-screen w-full overflow-hidden font-['Inter',system-ui,sans-serif]">
