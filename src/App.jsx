@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './components/ThemeToggle';
 import StatusCard from './components/StatusCard';
 import Hero from './components/Hero';
@@ -13,6 +14,26 @@ function App() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark';
   });
+  const [isMobile, setIsMobile] = useState(false);
+  
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  // Derive current page from path
+  const path = location.pathname.slice(1).toUpperCase();
+  const currentPage = path === '' ? 'HOME' : path;
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const pageTitle = currentPage.charAt(0) + currentPage.slice(1).toLowerCase();
+    document.title = `${pageTitle} - Abdulkadir Shaikh`;
+  }, [currentPage]);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
@@ -49,7 +70,7 @@ function App() {
           <img
             src={meteorImage}
             alt=""
-            className="meteor-piece meteor-piece-lg"
+            className="meteor-piece meteor-piece-lg hidden lg:block"
           />
           <img
             src={meteorImage}
@@ -66,19 +87,48 @@ function App() {
         {/* Main Interface Layout */}
         <div className="relative h-full w-full flex items-center justify-center px-[4%]">
           {/* Navigation Section (Positioned Left) */}
-          <div className="absolute left-[-5%] lg:left-0 top-1/2 -translate-y-1/2 w-full max-w-[500px] h-full pointer-events-none">
+          <div className="absolute left-[-5%] lg:left-0 top-1/2 -translate-y-1/2 w-full lg:w-[500px] h-full pointer-events-none lg:pointer-events-auto z-20">
             <div className="pointer-events-auto h-full">
-              <Navigation theme={theme} />
+              <Navigation theme={theme} currentPage={currentPage} onPageChange={(page) => {
+                console.log('App received page change:', page);
+                navigate(page === 'HOME' ? '/' : `/${page.toLowerCase()}`);
+              }} />
             </div>
           </div>
 
-          {/* Hero Section (Centered) */}
+          {/* Content Section (Centered) */}
           <div className="relative z-10">
-            <Hero theme={theme} />
+            <Routes>
+              <Route path="/" element={<Hero theme={theme} />} />
+              {['ABOUT', 'SKILLS', 'PROJECTS', 'EXPERIENCE', 'CONTACT'].map((page) => (
+                <Route 
+                  key={page} 
+                  path={`/${page.toLowerCase()}`} 
+                  element={
+                    <div className={`text-center ${theme === 'dark' ? 'text-white' : 'text-slate-800'}`}>
+                      <h1 className="text-4xl md:text-5xl font-black mb-2 tracking-wider">{page}</h1>
+                      <p className={`text-xs uppercase tracking-[0.3em] font-light ${theme === 'dark' ? 'text-white/60' : 'text-blue-600/70'}`}>
+                        Page Under Construction
+                      </p>
+                      <button 
+                        onClick={() => navigate('/')}
+                        className={`mt-6 px-4 py-2 border rounded-full text-xs font-bold tracking-widest transition-colors ${
+                          theme === 'dark' 
+                            ? 'border-white text-white hover:bg-white hover:text-black' 
+                            : 'border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white'
+                        }`}
+                      >
+                        BACK TO HOME
+                      </button>
+                    </div>
+                  } 
+                />
+              ))}
+            </Routes>
           </div>
         </div>
 
-        {/* Bottom Left: Location Card */}
+        {/* Bottom Left: Location Card (Moved to top right on mobile to avoid overlap) */}
         <StatusCard
           theme={theme}
           imageSrc={earthIcon}
@@ -86,17 +136,19 @@ function App() {
           status="Earth"
           subtext="Milky Way"
           showDot={false}
-          position="bottom-left"
+          position={isMobile ? "top-right" : "bottom-left"}
         />
 
-        {/* Bottom Right: Status Card */}
-        <StatusCard
-          theme={theme}
-          icon={Orbit}
-          status="Dreaming"
-          subtext="Building · Learning · Growing"
-          position="bottom-right"
-        />
+        {/* Bottom Right: Status Card (Hidden on mobile) */}
+        <div className="hidden lg:block">
+          <StatusCard
+            theme={theme}
+            icon={Orbit}
+            status="Dreaming"
+            subtext="Building · Learning · Growing"
+            position="bottom-right"
+          />
+        </div>
       </div>
     </main>
   );
