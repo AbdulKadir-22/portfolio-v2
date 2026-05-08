@@ -66,7 +66,7 @@ function App() {
         {/* Main Interface Layout */}
         <div className="relative h-full w-full flex items-center justify-center px-[4%]">
           {/* Navigation Section (Positioned Left) */}
-          <div className="absolute left-0 lg:left-[5%] top-1/2 -translate-y-1/2 w-full max-w-[600px] h-full pointer-events-none">
+          <div className="absolute left-[-5%] lg:left-0 top-1/2 -translate-y-1/2 w-full max-w-[500px] h-full pointer-events-none">
             <div className="pointer-events-auto h-full">
               <Navigation theme={theme} />
             </div>
