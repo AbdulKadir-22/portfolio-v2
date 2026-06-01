@@ -9,6 +9,7 @@ import Hero from './features/home/Hero';
 // Lazy-load other pages (only fetched when navigated to)
 const ResumePage = lazy(() => import('./features/resume/pages/ResumePage'));
 const BlogsPage = lazy(() => import('./features/blogs/pages/BlogsPage'));
+const ProjectsPage = lazy(() => import('./features/projects/pages/ProjectsPage'));
 
 /**
  * Centralized route definitions.
@@ -85,8 +86,18 @@ const AppRoutes = () => {
           }
         />
 
+        {/* Projects (lazy-loaded) */}
+        <Route
+          path="projects"
+          element={
+            <Suspense fallback={<PageLoader />}>
+              <ProjectsPage />
+            </Suspense>
+          }
+        />
+
         {/* Placeholder routes for future pages */}
-        {['SKILLS', 'PROJECTS', 'EXPERIENCE', 'HOBBIES', 'CONTACT'].map((page) => (
+        {['SKILLS', 'EXPERIENCE', 'HOBBIES', 'CONTACT'].map((page) => (
           <Route
             key={page}
             path={page.toLowerCase()}

@@ -157,10 +157,10 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
 
   // Desktop Orbit System
   return (
-    <div className="relative w-full h-full flex items-center justify-center lg:justify-start select-none">
+    <div className="relative w-full h-full flex items-center justify-center lg:justify-start select-none pointer-events-none">
       {/* Central Planet Container */}
       <div 
-        className="lg:w-[340px] lg:h-[340px] flex items-center justify-center transition-all duration-500 cursor-pointer relative w-[220px] h-[220px]"
+        className="lg:w-[340px] lg:h-[340px] flex items-center justify-center transition-all duration-500 cursor-pointer relative w-[220px] h-[220px] pointer-events-auto"
         onClick={() => {
           if (onPageChange) {
             onPageChange('HOME');

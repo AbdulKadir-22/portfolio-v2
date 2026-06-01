@@ -75,10 +75,10 @@ const AppLayout = () => {
         </div>
 
         {/* ── Main Interface Layout ── */}
-        <div className="relative h-full w-full flex items-center justify-center px-[4%]">
+        <div className="relative min-h-full w-full flex items-start lg:items-center justify-center px-[4%]">
           {/* Navigation (Left) - Desktop Orbits */}
-          <div className="hidden lg:block absolute left-[-5%] lg:left-0 top-1/2 -translate-y-1/2 w-full lg:w-[500px] h-full pointer-events-none lg:pointer-events-auto z-20">
-            <div className="pointer-events-auto h-full">
+          <div className="hidden lg:block absolute left-[-5%] lg:left-0 top-1/2 -translate-y-1/2 w-full lg:w-[500px] h-full pointer-events-none z-20">
+            <div className="pointer-events-none h-full">
               <Navigation
                 theme={theme}
                 currentPage={currentPage}
@@ -96,8 +96,8 @@ const AppLayout = () => {
             />
           </div>
 
-          {/* Page Content (via Outlet) */}
-          <div className="relative z-10 w-full flex items-center justify-center pt-48 pb-20 lg:pt-0 lg:pb-0">
+          {/* Page Content (via Outlet) — Aligned to start to prevent negative space shifting on mobile */}
+          <div className="relative z-10 w-full flex flex-col items-center justify-start lg:justify-center pt-36 pb-20 lg:pt-0 lg:pb-0 min-h-screen">
             <Outlet />
           </div>
         </div>

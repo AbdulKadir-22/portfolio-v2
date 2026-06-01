@@ -29,7 +29,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="flex flex-col items-center text-center px-4 w-full max-w-xl scale-[0.95]">
+    <section className="flex flex-col items-center text-center px-4 w-full max-w-xl scale-[0.95] mt-12 lg:mt-0">
       <header className="mb-4">
         {['ABDULKADIR', 'SHAIKH'].map((name, i) => (
           <h1 key={i} className={`text-4xl sm:text-6xl md:text-7xl font-black ${i > 0 ? '-mt-1' : ''}`} style={titleStyle}>

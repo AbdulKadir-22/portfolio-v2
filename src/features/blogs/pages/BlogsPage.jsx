@@ -79,7 +79,7 @@ const BlogsPage = () => {
   return (
     <section
       id="blogs-page"
-      className="w-full max-w-[98vw] pt-82 xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
+      className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "astroblog",
+    "title": "AstroBlog",
+    "category": "fullstack",
+    "badge": "Full Stack",
+    "starred": true,
+    "description": "A modern blog platform built with Next.js and MDX.",
+    "techStack": [
+      { "name": "Next.js", "logo": "N" },
+      { "name": "MDX", "logo": "MC" },
+      { "name": "Tailwind", "logo": "CSS" },
+      { "name": "TypeScript", "logo": "TS" }
+    ]
+  },
+  {
+    "id": "devconnect",
+    "title": "DevConnect",
+    "category": "fullstack",
+    "badge": "Full Stack",
+    "starred": true,
+    "description": "Developer social platform to connect, share and grow.",
+    "techStack": [
+      { "name": "Next.js", "logo": "N" },
+      { "name": "TypeScript", "logo": "TS" },
+      { "name": "Node.js", "logo": "NODE" },
+      { "name": "MongoDB", "logo": "DB" }
+    ]
+  },
+  {
+    "id": "portfoliov2",
+    "title": "Portfolio v2",
+    "category": "webapps",
+    "badge": "Web App",
+    "starred": true,
+    "description": "My personal portfolio built with Next.js and Tailwind CSS.",
+    "techStack": [
+      { "name": "Next.js", "logo": "N" },
+      { "name": "Tailwind", "logo": "CSS" },
+      { "name": "TypeScript", "logo": "TS" }
+    ]
+  },
+  {
+    "id": "neargrab",
+    "title": "NearGrab",
+    "category": "fullstack",
+    "badge": "Full Stack",
+    "starred": true,
+    "description": "Ride booking web app with real-time tracking.",
+    "techStack": [
+      { "name": "React", "logo": "R" },
+      { "name": "Node.js", "logo": "NODE" },
+      { "name": "JavaScript", "logo": "JS" }
+    ]
+  },
+  {
+    "id": "portyours",
+    "title": "PortYours",
+    "category": "webapps",
+    "badge": "Web App",
+    "starred": true,
+    "description": "Cloud storage solution with file sharing and previews.",
+    "techStack": [
+      { "name": "React", "logo": "R" },
+      { "name": "TypeScript", "logo": "TS" },
+      { "name": "Tailwind", "logo": "CSS" }
+    ]
+  },
+  {
+    "id": "codesnippet",
+    "title": "CodeSnippet",
+    "category": "tools",
+    "badge": "Tools",
+    "starred": true,
+    "description": "Organize and share your code snippets easily.",
+    "techStack": [
+      { "name": "TypeScript", "logo": "TS" },
+      { "name": "Vite", "logo": "V" },
+      { "name": "CSS/HTML", "logo": "H" }
+    ]
+  }
+]
