@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Orbit } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import ThemeToggle from '../ThemeToggle';
 import Navigation from '../Navigation';
-import StatusCard from '../StatusCard';
 import ResumeButton from './ResumeButton';
 import NowPlayingCard from './NowPlayingCard';
+import Footer from './Footer';
 import { siteContent } from '../../data/content';
 
 import lightBg from '../../assets/background/light-bg.png';
 import darkBg from '../../assets/background/dark-bg.png';
-import earthIcon from '../../assets/icons/earth.png';
 import meteorImg from '../../assets/meteors/meteor.png';
 
 /**
@@ -26,6 +24,7 @@ const AppLayout = () => {
 
   const path = location.pathname.slice(1).toUpperCase();
   const currentPage = path === '' ? 'HOME' : path;
+  const showFooter = currentPage !== 'HOME';
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -48,15 +47,13 @@ const AppLayout = () => {
     <main className="relative min-h-screen w-full overflow-hidden font-['Inter',system-ui,sans-serif]">
       {/* ── Background Layers ── */}
       <div
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
-          !isDark ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${!isDark ? 'opacity-100' : 'opacity-0'
+          }`}
         style={{ backgroundImage: `url(${lightBg})` }}
       />
       <div
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
-          isDark ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${isDark ? 'opacity-100' : 'opacity-0'
+          }`}
         style={{ backgroundImage: `url(${darkBg})` }}
       />
 
@@ -97,32 +94,13 @@ const AppLayout = () => {
           </div>
 
           {/* Page Content (via Outlet) — Aligned to start to prevent negative space shifting on mobile */}
-          <div className="relative z-10 w-full flex flex-col items-center justify-start lg:justify-center pt-36 pb-20 lg:pt-0 lg:pb-0 min-h-screen">
+          <div className="relative z-10 w-full flex flex-col items-center justify-start lg:justify-center pt-36 pb-20 lg:pb-8 min-h-screen">
             <Outlet />
           </div>
         </div>
 
-        {/* ── Fixed Cards ── */}
-        <StatusCard
-          theme={theme}
-          imageSrc={earthIcon}
-          label={siteContent.location.label}
-          status={siteContent.location.status}
-          subtext={siteContent.location.subtext}
-          showDot={false}
-          position={isMobile ? 'top-right' : 'bottom-left'}
-        />
-
-        <div className="hidden lg:block">
-          <StatusCard
-            theme={theme}
-            icon={Orbit}
-            label={siteContent.status.label}
-            status={siteContent.status.status}
-            subtext={siteContent.status.subtext}
-            position="bottom-right"
-          />
-        </div>
+        {/* Footer */}
+        {showFooter && <Footer />}
       </div>
     </main>
   );

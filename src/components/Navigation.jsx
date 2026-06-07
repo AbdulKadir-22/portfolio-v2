@@ -28,7 +28,7 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
       <div className="select-none">
         {/* Closed State: Floating Glowing Mini Planet Menu Toggle */}
         {!isOpen && (
-          <div 
+          <div
             className="fixed bottom-6 left-6 w-14 h-14 z-50 rounded-full cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center"
             onClick={() => setIsOpen(true)}
             aria-label="Open Navigation menu"
@@ -56,12 +56,12 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
 
         {/* Open State: Fullscreen Immersive Solar System Overlay */}
         {isOpen && (
-          <div 
+          <div
             className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/85 backdrop-blur-lg transition-all duration-500 animate-fadeIn"
             onClick={() => setIsOpen(false)}
           >
             {/* Close Button top-left */}
-            <button 
+            <button
               className="absolute top-6 left-6 text-white/60 hover:text-white text-xs font-bold tracking-widest flex items-center gap-1.5 cursor-pointer"
               onClick={() => setIsOpen(false)}
             >
@@ -70,7 +70,7 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
 
             {/* Immersive Solar Menu */}
             <div className="relative w-[300px] h-[300px] flex items-center justify-center" onClick={e => e.stopPropagation()}>
-              
+
               {/* Starry Orbit Ring Indicators */}
               {[1.0, 1.4].map((scale, i) => (
                 <div
@@ -84,7 +84,7 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
               ))}
 
               {/* Center Main Planet */}
-              <div 
+              <div
                 className="w-[120px] h-[120px] relative flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95"
                 onClick={() => setIsOpen(false)}
               >
@@ -106,7 +106,7 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
               {/* Orbiting Solar Navigation Items (Fanned out in a perfect circle) */}
               {navItems.map((item, index) => {
                 const angle = -90 + (index * 60); // 6 items distributed evenly (360 / 6 = 60 deg)
-                const radius = 110; 
+                const radius = 110;
                 const x = Math.cos((angle * Math.PI) / 180) * radius;
                 const y = Math.sin((angle * Math.PI) / 180) * radius;
 
@@ -137,11 +137,10 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
                           }}
                         />
                       </div>
-                      <span className={`text-[8px] font-black tracking-widest px-2 py-0.5 rounded border transition-colors duration-300 ${
-                        currentPage === item.label
+                      <span className={`text-[8px] font-black tracking-widest px-2 py-0.5 rounded border transition-colors duration-300 ${currentPage === item.label
                           ? 'bg-white text-black border-white'
                           : 'bg-black/60 text-white/90 border-white/10 group-hover:border-white/40'
-                      }`}>
+                        }`}>
                         {item.label}
                       </span>
                     </div>
@@ -159,7 +158,7 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
   return (
     <div className="relative w-full h-full flex items-center justify-center lg:justify-start select-none pointer-events-none">
       {/* Central Planet Container */}
-      <div 
+      <div
         className="lg:w-[340px] lg:h-[340px] flex items-center justify-center transition-all duration-500 cursor-pointer relative w-[220px] h-[220px] pointer-events-auto"
         onClick={() => {
           if (onPageChange) {
@@ -213,8 +212,8 @@ const Navigation = ({ theme, currentPage = 'HOME', onPageChange }) => {
           {/* Orbiting Planets (Moved inside central planet container to fix desktop alignment) */}
           {navItems.map((item, index) => {
             const angle = item.angle;
-            const radius = isDark ? 210 + (index * 10) : 200 + (index * 8); 
-              
+            const radius = isDark ? 210 + (index * 10) : 200 + (index * 8);
+
             const x = Math.cos((angle * Math.PI) / 180) * radius;
             const y = Math.sin((angle * Math.PI) / 180) * radius;
 

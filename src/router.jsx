@@ -18,6 +18,7 @@ const AllBooksPage = lazy(() => import('./features/hobbies/pages/AllBooksPage'))
 const AllMoviesPage = lazy(() => import('./features/hobbies/pages/AllMoviesPage'));
 const AllPaintingsPage = lazy(() => import('./features/hobbies/pages/AllPaintingsPage'));
 const ContactPage = lazy(() => import('./features/contact/pages/ContactPage'));
+const SkillsPage = lazy(() => import('./features/skills/pages/SkillsPage'));
 
 /**
  * Centralized route definitions.
@@ -30,9 +31,8 @@ const PageLoader = () => {
   return (
     <div className="flex items-center justify-center py-20">
       <div
-        className={`w-6 h-6 rounded-full border-2 border-t-transparent animate-spin ${
-          isDark ? 'border-white/30' : 'border-blue-400/40'
-        }`}
+        className={`w-6 h-6 rounded-full border-2 border-t-transparent animate-spin ${isDark ? 'border-white/30' : 'border-blue-400/40'
+          }`}
       />
     </div>
   );
@@ -47,19 +47,17 @@ const PlaceholderPage = ({ page }) => {
     <div className={`text-center ${isDark ? 'text-white' : 'text-slate-800'}`}>
       <h1 className="text-4xl md:text-5xl font-black mb-2 tracking-wider">{page}</h1>
       <p
-        className={`text-xs uppercase tracking-[0.3em] font-light ${
-          isDark ? 'text-white/60' : 'text-blue-600/70'
-        }`}
+        className={`text-xs uppercase tracking-[0.3em] font-light ${isDark ? 'text-white/60' : 'text-blue-600/70'
+          }`}
       >
         Page Under Construction
       </p>
       <button
         onClick={() => navigate('/')}
-        className={`mt-6 px-4 py-2 border rounded-full text-xs font-bold tracking-widest transition-colors cursor-pointer ${
-          isDark
+        className={`mt-6 px-4 py-2 border rounded-full text-xs font-bold tracking-widest transition-colors cursor-pointer ${isDark
             ? 'border-white text-white hover:bg-white hover:text-black'
             : 'border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white'
-        }`}
+          }`}
       >
         BACK TO HOME
       </button>
@@ -178,14 +176,15 @@ const AppRoutes = () => {
           }
         />
 
-        {/* Placeholder routes for future pages */}
-        {['SKILLS'].map((page) => (
-          <Route
-            key={page}
-            path={page.toLowerCase()}
-            element={<PlaceholderPage page={page} />}
-          />
-        ))}
+        {/* Skills (lazy-loaded) */}
+        <Route
+          path="skills"
+          element={
+            <Suspense fallback={<PageLoader />}>
+              <SkillsPage />
+            </Suspense>
+          }
+        />
       </Route>
     </Routes>
   );

@@ -1,5 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
+
+@utility font-signature {
+  font-family: 'Playfair Display', Georgia, Cambria, serif;
+}
+
+@keyframes footerTwinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes footerOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@utility animate-footer-twinkle {
+  animation: footerTwinkle 4s infinite ease-in-out;
+}
+
+@utility animate-footer-orbit {
+  animation: footerOrbit 25s linear infinite;
+}
+
+@utility bg-grid-footer-light {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%);
+}
+
+@utility bg-grid-footer-dark {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%);
+}
+
 
 @theme {
   --color-primary: #1C1917;
@@ -84,7 +123,7 @@
   top: 15%;
   width: 80%;
   max-width: 640px;
-  object-fit: contain;    
+  object-fit: contain;
   animation: meteorFloatSlow 8s ease-in-out infinite;
 }
 
@@ -111,13 +150,25 @@
    ═══════════════════════════════════════════ */
 
 @keyframes planetRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes orbitFloat {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-5px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
 }
 
 .planet-animation {
@@ -134,15 +185,20 @@
    ═══════════════════════════════════════════ */
 
 @keyframes resumeGlow {
-  0%, 78%, 100% {
+
+  0%,
+  78%,
+  100% {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     filter: brightness(1);
   }
+
   85% {
     box-shadow: 0 0 20px 6px rgba(234, 179, 8, 0.5),
-                0 0 40px 12px rgba(234, 179, 8, 0.2);
+      0 0 40px 12px rgba(234, 179, 8, 0.2);
     filter: brightness(1.1);
   }
+
   92% {
     box-shadow: 0 0 10px 3px rgba(234, 179, 8, 0.3);
     filter: brightness(1.05);
@@ -150,15 +206,20 @@
 }
 
 @keyframes resumeGlowLight {
-  0%, 78%, 100% {
+
+  0%,
+  78%,
+  100% {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     filter: brightness(1);
   }
+
   85% {
     box-shadow: 0 0 20px 6px rgba(37, 99, 235, 0.4),
-                0 0 40px 12px rgba(37, 99, 235, 0.15);
+      0 0 40px 12px rgba(37, 99, 235, 0.15);
     filter: brightness(1.05);
   }
+
   92% {
     box-shadow: 0 0 10px 3px rgba(37, 99, 235, 0.2);
     filter: brightness(1.02);
@@ -196,17 +257,32 @@
   flex-shrink: 0;
 }
 
-.macos-dot-red { background: #FF5F57; }
-.macos-dot-yellow { background: #FFBD2E; }
-.macos-dot-green { background: #28C840; }
+.macos-dot-red {
+  background: #FF5F57;
+}
+
+.macos-dot-yellow {
+  background: #FFBD2E;
+}
+
+.macos-dot-green {
+  background: #28C840;
+}
 
 /* ═══════════════════════════════════════════
    Scroll Indicator Animation
    ═══════════════════════════════════════════ */
 
 @keyframes scrollBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
 }
 
 .scroll-indicator-icon {
@@ -218,6 +294,7 @@
    ═══════════════════════════════════════════ */
 
 @media (prefers-reduced-motion: reduce) {
+
   .resume-glow-dark,
   .resume-glow-light,
   .scroll-indicator-icon,
