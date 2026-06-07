@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '../../../context/ThemeContext';
 import { blogConfig, blogPosts, featuredStory } from '../data/config';
 import BlogCard from '../components/BlogCard';
@@ -88,6 +89,15 @@ const BlogsPage = () => {
       id="blogs-page"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>My Blogs — Abdulkadir Shaikh</title>
+        <meta name="description" content="Thoughts, stories, and lessons from my journey as a developer and human being. Articles on technology, learning, mindset, and life." />
+        <link rel="canonical" href="https://abdulkadir.in/blogs" />
+        <meta property="og:title" content="My Blogs — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Thoughts, stories, and lessons from my journey as a developer and human being. Articles on technology, learning, mindset, and life." />
+        <meta property="og:url" content="https://abdulkadir.in/blogs" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">
         <div className="flex items-center gap-2">

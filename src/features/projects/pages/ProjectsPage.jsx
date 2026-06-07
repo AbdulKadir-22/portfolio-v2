@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../../context/ThemeContext';
 import { projects, projectConfig } from '../data/config';
@@ -46,6 +47,15 @@ const ProjectsPage = () => {
       id="projects-page"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>Projects — Abdulkadir Shaikh</title>
+        <meta name="description" content="12+ projects built with MERN, Flutter, React, and Node.js. From Neargrab — a hyperlocal shopkeeper platform — to the Ramzaan Amaal Tracker with 500+ active users." />
+        <link rel="canonical" href="https://abdulkadir.in/projects" />
+        <meta property="og:title" content="Projects — Abdulkadir Shaikh" />
+        <meta property="og:description" content="12+ projects built with MERN, Flutter, React, and Node.js. From Neargrab — a hyperlocal shopkeeper platform — to the Ramzaan Amaal Tracker with 500+ active users." />
+        <meta property="og:url" content="https://abdulkadir.in/projects" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">
         <div className="flex items-center gap-2">

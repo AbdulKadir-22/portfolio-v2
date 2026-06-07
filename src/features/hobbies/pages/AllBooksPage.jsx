@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Search, SlidersHorizontal, BookOpen, Star } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
@@ -76,6 +77,15 @@ const AllBooksPage = () => {
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-6 md:py-10 min-h-screen">
+      <Helmet>
+        <title>The Library Vault — Abdulkadir Shaikh</title>
+        <meta name="description" content="Browse the complete list of books read by Abdulkadir Shaikh. Curated ratings, reviews, and insights across sci-fi, classics, biographies, and philosophy." />
+        <link rel="canonical" href="https://abdulkadir.in/hobbies/books" />
+        <meta property="og:title" content="The Library Vault — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Browse the complete list of books read by Abdulkadir Shaikh. Curated ratings, reviews, and insights across sci-fi, classics, biographies, and philosophy." />
+        <meta property="og:url" content="https://abdulkadir.in/hobbies/books" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       
       {/* Back button and page title */}
       <div className="flex flex-col gap-4 mb-8">

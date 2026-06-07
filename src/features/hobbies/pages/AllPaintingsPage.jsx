@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Search, SlidersHorizontal, Palette, Sparkles } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
@@ -62,6 +63,15 @@ const AllPaintingsPage = () => {
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-6 md:py-10 min-h-screen">
+      <Helmet>
+        <title>The Art Gallery — Abdulkadir Shaikh</title>
+        <meta name="description" content="Explore the traditional and digital artwork by Abdulkadir Shaikh. Acrylic and oil paintings, gouache studies, and sketches capturing cosmic aesthetics." />
+        <link rel="canonical" href="https://abdulkadir.in/hobbies/paintings" />
+        <meta property="og:title" content="The Art Gallery — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Explore the traditional and digital artwork by Abdulkadir Shaikh. Acrylic and oil paintings, gouache studies, and sketches capturing cosmic aesthetics." />
+        <meta property="og:url" content="https://abdulkadir.in/hobbies/paintings" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       
       {/* Back button and page title */}
       <div className="flex flex-col gap-4 mb-8">

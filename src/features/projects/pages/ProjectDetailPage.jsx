@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { siteContent } from '../../../data/content';
 import { 
@@ -149,11 +150,40 @@ const ProjectDetailPage = () => {
     }
   };
 
+  const projectSchema = useMemo(() => {
+    if (!baseProject) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": baseProject.title,
+      "description": baseProject.description || (details ? details.subtitle : ''),
+      "author": {
+        "@type": "Person",
+        "name": "Abdulkadir Shaikh"
+      },
+      "url": `https://demo.shaikh.dev/${id}`,
+      "applicationCategory": "WebApplication"
+    };
+  }, [id, baseProject, details]);
+
+  const pageDescription = baseProject?.description || details?.subtitle || '';
+  const pageOgImage = baseProject?.image ? (baseProject.image.startsWith('http') ? baseProject.image : `https://abdulkadir.in${baseProject.image}`) : 'https://abdulkadir.in/og-image.png';
+
   return (
     <div
       id="project-detail-container"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col gap-6 py-4"
     >
+      <Helmet>
+        <title>{baseProject?.title} — Abdulkadir Shaikh</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={`https://abdulkadir.in/project/${id}`} />
+        <meta property="og:title" content={`${baseProject?.title} — Abdulkadir Shaikh`} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={`https://abdulkadir.in/project/${id}`} />
+        <meta property="og:image" content={pageOgImage} />
+        {projectSchema && <script type="application/ld+json">{JSON.stringify(projectSchema)}</script>}
+      </Helmet>
       {/* 2-Column Responsive Layout */}
       <div className="w-full lg:pl-[210px] xl:pl-[240px] flex flex-col lg:flex-row gap-8 items-start justify-between">
         

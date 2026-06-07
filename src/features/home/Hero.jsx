@@ -1,5 +1,6 @@
 import { createElement } from 'react';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '../../context/ThemeContext';
 import { siteContent } from '../../data/content';
 import { contactConfig } from '../contact/data/config';
@@ -43,6 +44,15 @@ const Hero = () => {
 
   return (
     <section className="flex flex-col items-center text-center px-4 w-full max-w-xl scale-[0.95] mt-12 lg:mt-0">
+      <Helmet>
+        <title>Abdulkadir Shaikh — Full Stack Developer & Builder</title>
+        <meta name="description" content="I want to become sun who shines other, but am a meteor who only shines when he is falling. Explore the universe of Abdulkadir Shaikh — developer, writer, dreamer." />
+        <link rel="canonical" href="https://abdulkadir.in/" />
+        <meta property="og:title" content="Abdulkadir Shaikh — Full Stack Developer & Builder" />
+        <meta property="og:description" content="I want to become sun who shines other, but am a meteor who only shines when he is falling. Explore the universe of Abdulkadir Shaikh — developer, writer, dreamer." />
+        <meta property="og:url" content="https://abdulkadir.in/" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       <header className="mb-4">
         {names.map((name, i) => (
           <h1 key={i} className={`text-4xl sm:text-6xl md:text-7xl font-black ${i > 0 ? '-mt-1' : ''}`} style={titleStyle}>

@@ -2,9 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdulkadir Shaikh</title>
+
+    <!-- Preconnect & Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" />
+
+    <!-- Preload LCP Assets -->
+    <link rel="preload" as="image" href="/og-image.png" />
+
+    <!-- Primary Meta -->
+    <title>Abdulkadir Shaikh — Full Stack Developer</title>
+    <meta name="description" content="Personal website of Abdulkadir Shaikh — full stack developer, CS student, builder of Neargrab, and fiction writer under the pen name Ariont. Based in Gujarat, India." />
+    <meta name="author" content="Abdulkadir Shaikh" />
+    <meta name="keywords" content="Abdulkadir Shaikh, full stack developer, MERN stack, Flutter, React, Neargrab, Gujarat developer, CS student, Ariont, personal website" />
+    <link rel="canonical" href="https://abdulkadir.in/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdulkadir.in/" />
+    <meta property="og:title" content="Abdulkadir Shaikh — Full Stack Developer" />
+    <meta property="og:description" content="Personal website of Abdulkadir Shaikh — full stack developer, builder, and fiction writer. Explore projects, blogs, experience and more." />
+    <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Abdulkadir Shaikh" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@abdulkadirshaikh" />
+    <meta name="twitter:creator" content="@abdulkadirshaikh" />
+    <meta name="twitter:title" content="Abdulkadir Shaikh — Full Stack Developer" />
+    <meta name="twitter:description" content="Personal website of Abdulkadir Shaikh — full stack developer, builder, and fiction writer." />
+    <meta name="twitter:image" content="https://abdulkadir.in/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Theme color (matches site aesthetic) -->
+    <meta name="theme-color" content="#0a0f2c" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <!-- 3.1 — Person Schema (Global) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdulkadir Shaikh",
+      "alternateName": "Ariont",
+      "url": "https://abdulkadir.in",
+      "image": "https://abdulkadir.in/og-image.png",
+      "sameAs": [
+        "https://github.com/abdulkadirshaikh",
+        "https://linkedin.com/in/abdulkadirshaikh",
+        "https://hashnode.com/@ariont",
+        "https://medium.com/@akadir22086"
+      ],
+      "jobTitle": "Full Stack Developer",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Uka Tarsadia University"
+      },
+      "knowsAbout": ["JavaScript", "React", "Node.js", "Flutter", "MERN Stack", "Full Stack Development"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- 3.2 — WebSite Schema (Global) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Abdulkadir Shaikh",
+      "url": "https://abdulkadir.in",
+      "description": "Personal website of Abdulkadir Shaikh — full stack developer, builder, and fiction writer.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://abdulkadir.in/blogs?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '../../../context/ThemeContext';
 import { skillsConfig, skillsData } from '../data/skillsData';
 import SkillsOrbSystem from '../components/SkillsOrbSystem';
@@ -36,6 +37,15 @@ const SkillsPage = () => {
       id="skills-page"
       className="w-full max-w-[96vw] lg:max-w-[98vw] xl:max-w-[1600px] 2xl:max-w-[1700px] mx-auto px-4 lg:pr-8 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>Skills — Abdulkadir Shaikh</title>
+        <meta name="description" content="Full stack skills including JavaScript, React, Node.js, Flutter, MongoDB, PostgreSQL, Prisma, Docker, and more. 90%+ proficiency in the MERN stack." />
+        <link rel="canonical" href="https://abdulkadir.in/skills" />
+        <meta property="og:title" content="Skills — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Full stack skills including JavaScript, React, Node.js, Flutter, MongoDB, PostgreSQL, Prisma, Docker, and more. 90%+ proficiency in the MERN stack." />
+        <meta property="og:url" content="https://abdulkadir.in/skills" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* ── Page Header Title ── */}
       <header className="flex items-center gap-4 mb-2 select-none">
         <div className="flex items-center gap-2">

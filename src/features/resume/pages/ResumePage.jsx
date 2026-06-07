@@ -1,4 +1,5 @@
 import { Download } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '../../../context/ThemeContext';
 import ResumeViewer from '../components/ResumeViewer';
 import JourneyCard from '../../../components/JourneyCard';
@@ -34,6 +35,15 @@ const ResumePage = () => {
       id="resume-page"
       className="w-full max-w-[95vw] xl:max-w-[1440px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>Resume — Abdulkadir Shaikh</title>
+        <meta name="description" content="Download the resume of Abdulkadir Shaikh — Full Stack Developer with expertise in MERN, Flutter, and scalable product development." />
+        <link rel="canonical" href="https://abdulkadir.in/resume" />
+        <meta property="og:title" content="Resume — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Download the resume of Abdulkadir Shaikh — Full Stack Developer with expertise in MERN, Flutter, and scalable product development." />
+        <meta property="og:url" content="https://abdulkadir.in/resume" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">
         <div className="flex items-center gap-2">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Feather, Sparkles } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
 import { literatureConfig } from '../data/literatureData';
@@ -16,6 +17,15 @@ const LiteraturePage = () => {
       id="literature-page"
       className="w-full max-w-[95vw] xl:max-w-[1440px] mx-auto px-4 flex flex-col items-center gap-8 py-4 select-none"
     >
+      <Helmet>
+        <title>Literature Portfolio — Abdulkadir Shaikh</title>
+        <meta name="description" content="Read the creative and fiction writings of Abdulkadir Shaikh, writing under the pen name Ariont / Zeron. Explore featured novels, drafts, poems and essays." />
+        <link rel="canonical" href="https://abdulkadir.in/literature" />
+        <meta property="og:title" content="Literature Portfolio — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Read the creative and fiction writings of Abdulkadir Shaikh, writing under the pen name Ariont / Zeron. Explore featured novels, drafts, poems and essays." />
+        <meta property="og:url" content="https://abdulkadir.in/literature" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* ── Page Header ── */}
       <header className="flex flex-col items-center mb-2 text-center animate-fadeIn select-none">
         <div className="flex items-center gap-3">

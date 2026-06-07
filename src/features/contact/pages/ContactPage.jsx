@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '../../../context/ThemeContext';
 import { contactConfig } from '../data/config';
 import ContactForm from '../components/ContactForm';
@@ -13,6 +14,15 @@ const ContactPage = () => {
       id="contact-page"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>Contact — Abdulkadir Shaikh</title>
+        <meta name="description" content="Have a question, an idea, or want to collaborate? Contact Abdulkadir Shaikh directly via the contact form or connect on GitHub and LinkedIn." />
+        <link rel="canonical" href="https://abdulkadir.in/contact" />
+        <meta property="og:title" content="Contact — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Have a question, an idea, or want to collaborate? Contact Abdulkadir Shaikh directly via the contact form or connect on GitHub and LinkedIn." />
+        <meta property="og:url" content="https://abdulkadir.in/contact" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">
         <div className="flex items-center gap-2">

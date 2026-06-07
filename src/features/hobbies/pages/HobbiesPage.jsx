@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../../context/ThemeContext';
 import { hobbiesConfig, books, movies, paintings } from '../data/config';
@@ -51,6 +52,15 @@ const HobbiesPage = () => {
       id="hobbies-page"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center justify-start gap-12 py-6 lg:pt-8 lg:pb-16 min-h-[75vh] transition-all duration-300"
     >
+      <Helmet>
+        <title>Beyond the Code — Abdulkadir Shaikh</title>
+        <meta name="description" content="A curated collection of books, movies, and paintings that shape Abdulkadir's mindset, imagination and creative journey." />
+        <link rel="canonical" href="https://abdulkadir.in/hobbies" />
+        <meta property="og:title" content="Beyond the Code — Abdulkadir Shaikh" />
+        <meta property="og:description" content="A curated collection of books, movies, and paintings that shape Abdulkadir's mindset, imagination and creative journey." />
+        <meta property="og:url" content="https://abdulkadir.in/hobbies" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* ── Page Header (Centered globally) ── */}
       <header className="flex flex-col items-center mb-2 animate-fadeIn text-center">
         <div className="flex items-center gap-4">

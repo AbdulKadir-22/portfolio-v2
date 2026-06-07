@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { 
   ArrowLeft, Calendar, Clock, Bookmark, Share2, 
@@ -217,11 +218,45 @@ const BlogDetailPage = () => {
   }
 
   // ── Main Page Render ──
+  const staticConfig = blogPosts.find((p) => p.id === id) || {};
+  const excerpt = frontmatter.excerpt || staticConfig.excerpt || 'Read this story on Abdulkadir Shaikh\'s personal portfolio.';
+  const absoluteImageUrl = postMeta.image ? (postMeta.image.startsWith('http') ? postMeta.image : `https://abdulkadir.in${postMeta.image}`) : 'https://abdulkadir.in/og-image.png';
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": postMeta.title,
+    "description": excerpt,
+    "author": {
+      "@type": "Person",
+      "name": "Abdulkadir Shaikh",
+      "url": "https://abdulkadir.in"
+    },
+    "datePublished": postMeta.date,
+    "image": absoluteImageUrl,
+    "url": `https://abdulkadir.in/blog/${id}`,
+    "publisher": {
+      "@type": "Person",
+      "name": "Abdulkadir Shaikh"
+    }
+  };
+
   return (
     <div
       id="blog-detail-container"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col gap-6 py-4"
     >
+      <Helmet>
+        <title>{postMeta.title} — Abdulkadir Shaikh</title>
+        <meta name="description" content={excerpt} />
+        <link rel="canonical" href={`https://abdulkadir.in/blog/${id}`} />
+        <meta property="og:title" content={`${postMeta.title} — Abdulkadir Shaikh`} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:url" content={`https://abdulkadir.in/blog/${id}`} />
+        <meta property="og:image" content={absoluteImageUrl} />
+        <meta property="article:published_time" content={postMeta.date} />
+        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+      </Helmet>
       {/* 2-Column Responsive Layout */}
       <div className="w-full lg:pl-[210px] xl:pl-[240px] flex flex-col lg:flex-row gap-8 items-start justify-between">
         

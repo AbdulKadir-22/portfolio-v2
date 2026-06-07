@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../../context/ThemeContext';
 import { experiences, experienceConfig } from '../data/config';
@@ -46,6 +47,15 @@ const ExperiencePage = () => {
       id="experience-page"
       className="w-full max-w-[98vw] xl:max-w-[1650px] mx-auto px-4 flex flex-col items-center gap-6 py-4"
     >
+      <Helmet>
+        <title>Experience — Abdulkadir Shaikh</title>
+        <meta name="description" content="Professional journey of Abdulkadir Shaikh — Full Stack Developer Intern at Bloomr.world, Research Assistant at University of Cambridge Machine Learning Group, and more." />
+        <link rel="canonical" href="https://abdulkadir.in/experience" />
+        <meta property="og:title" content="Experience — Abdulkadir Shaikh" />
+        <meta property="og:description" content="Professional journey of Abdulkadir Shaikh — Full Stack Developer Intern at Bloomr.world, Research Assistant at University of Cambridge Machine Learning Group, and more." />
+        <meta property="og:url" content="https://abdulkadir.in/experience" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+      </Helmet>
       {/* ── Page Title ── */}
       <header className="flex items-center gap-4 mb-2">
         <div className="flex items-center gap-2">
