@@ -1,114 +1,191 @@
 [
   {
-    "id": "cambridge-ra",
-    "role": "Research Assistant (Remote)",
-    "company": "Machine Learning Group, University of Cambridge",
-    "startDate": "May 2024",
+    "id": "neargrab-founder",
+    "role": "Founder & Full Stack Developer",
+    "company": "Neargrab",
+    "startDate": "Jan 2025",
     "endDate": "Present",
     "duration": "1+ Year",
     "isCurrent": true,
     "location": "Remote",
-    "type": "Research & Development",
+    "type": "Startup",
     "highlights": [
-      "Implement novel visualization tools in MCMCChains.jl for advanced Bayesian analysis and predictive modeling.",
-      "Automate publication site generation using Quarto and Python, reducing manual effort by 70%."
+      "Built a hyperlocal product discovery platform bridging neighborhood customers with physical merchants.",
+      "Architected a decoupled MERN-equivalent stack with 125+ API routes across customer, shopkeeper, and admin domains.",
+      "Shipped dynamic QR codes, GPS-based nearby search, and real-time shopkeeper dashboards."
     ],
-    "techStack": ["Julia", "Python", "Quarto", "MCMCChains.jl", "Violin", "PPC"],
+    "techStack": [
+      "React 19",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Supabase Auth",
+      "Cloudinary",
+      "Tailwind CSS v4",
+      "Zustand",
+      "Zod"
+    ],
     "responsibilities": [
-      "Implemented new visualization tools in MCMCChains.jl.",
-      "Automated publication site generation using Quarto.",
-      "Built Turing Actions for automated docs & navigation.",
-      "Contributed to benchmarking improvements in DynamicPPL.jl."
+      "Designed and built the full React frontend using a Feature Slice Pattern with Vite 8 and Tailwind CSS v4.",
+      "Architected the Express.js backend with 125+ routes covering customer, shopkeeper, and admin domains.",
+      "Integrated Supabase Auth with ES256 asymmetric JWT verification for secure multi-provider login.",
+      "Built media upload pipelines using Multer buffers streamed directly to Cloudinary CDN.",
+      "Implemented GPS-based product/shop discovery using PostgreSQL decimal coordinate queries."
     ],
-    "tools": ["Julia", "Python", "Quarto", "MCMCChains.jl", "Violin", "PPC", "DynamicPPL.jl", "Git"],
+    "tools": [
+      "React 19",
+      "Vite 8",
+      "Tailwind CSS v4",
+      "Zustand",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Supabase",
+      "Cloudinary",
+      "Zod",
+      "Pino",
+      "Vercel",
+      "Git"
+    ],
     "achievements": [
-      "Reduced publication workflow time by 70% through automation and tooling."
+      "Reached 1K+ users and 10+ active shops on the platform.",
+      "Achieved sub-50ms API latency across core discovery endpoints.",
+      "Delivered production-ready platform solo as a 3rd-year undergrad."
     ],
-    "icon": "shield"
+    "icon": "rocket"
   },
   {
-    "id": "technova-fsd",
+    "id": "bloomr-fsd",
     "role": "Full Stack Developer Intern",
-    "company": "TechNova Solutions, Mumbai",
-    "startDate": "Aug 2023",
-    "endDate": "Apr 2024",
-    "duration": "9 months",
+    "company": "Bloomr.world (IIT Madras Incubated)",
+    "startDate": "Dec 2025",
+    "endDate": "May 2026",
+    "duration": "6 months",
     "isCurrent": false,
-    "location": "Mumbai, India",
+    "location": "Remote (Chennai, India)",
     "type": "Software Engineering",
     "highlights": [
-      "Developed and maintained responsive web applications used by 10K+ users.",
-      "Collaborated with cross-functional teams to deliver features on time.",
-      "Optimized application performance, improving load time by 40%."
+      "Built the Mentor Connect module and full Admin Panel for the Bloomr platform.",
+      "Admin panel actively manages 1,000+ registered users.",
+      "Worked remotely with a team at an IIT Madras incubated startup."
     ],
-    "techStack": ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
+    "techStack": [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js"
+    ],
     "responsibilities": [
-      "Built and maintained full-stack web applications using Next.js and Node.js.",
+      "Developed the Mentor Connect module enabling mentee-mentor pairing and session management.",
+      "Built and maintained the Admin Panel to manage users, content, and platform operations.",
       "Designed RESTful APIs and integrated MongoDB for data persistence.",
-      "Collaborated in Agile sprints with cross-functional teams.",
-      "Wrote unit and integration tests to ensure code quality."
+      "Collaborated asynchronously with a remote-first team on an agile delivery cycle."
     ],
-    "tools": ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "Git", "Jira"],
+    "tools": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Git",
+      "REST APIs"
+    ],
     "achievements": [
-      "Improved page load performance by 40% through code splitting and lazy loading.",
-      "Delivered 3 major features ahead of schedule."
+      "Admin panel managing 1,000+ active users shipped within internship tenure.",
+      "Delivered Mentor Connect and Admin Panel modules end-to-end."
     ],
     "icon": "code"
   },
   {
-    "id": "opensource-contrib",
-    "role": "Open Source Contributor",
-    "company": "Various Projects",
-    "startDate": "May 2023",
-    "endDate": "Jul 2023",
-    "duration": "3 months",
-    "isCurrent": false,
+    "id": "mesms-freelance",
+    "role": "Project Lead & Full Stack Developer (Freelance)",
+    "company": "Confidential Client (NDA)",
+    "startDate": "May 2026",
+    "endDate": "Present",
+    "duration": "1+ Month",
+    "isCurrent": true,
     "location": "Remote",
-    "type": "Open Source",
+    "type": "Freelance",
     "highlights": [
-      "Contributed to open source projects and fixed critical issues.",
-      "Improved documentation and added new features."
+      "Solely architected and built the entire backend spanning 21 modules and 48 PostgreSQL tables for a retail ERP & POS system.",
+      "Leading a team of 4 graduate developers as a 3rd-year undergraduate managing full project lifecycle.",
+      "Driving Flutter-based mobile frontend development alongside backend ownership."
     ],
-    "techStack": ["GitHub", "JavaScript", "Docs", "Bug Fixing", "Open Source"],
+    "techStack": [
+      "Flutter",
+      "Dart",
+      "go_router",
+      "Riverpod",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM"
+    ],
     "responsibilities": [
-      "Identified and fixed critical bugs in popular open-source libraries.",
-      "Authored comprehensive documentation for contributor onboarding.",
-      "Reviewed pull requests and mentored junior contributors.",
-      "Implemented feature requests from the community backlog."
+      "Solely designed and built the entire backend — 21 modules and 48 PostgreSQL tables — from scratch.",
+      "Architected the Flutter frontend with go_router navigation and Riverpod state management.",
+      "Leading a cross-functional team of 4 graduate developers as the youngest member on the project.",
+      "Managing sprint planning, task delegation, code reviews, and delivery timelines."
     ],
-    "tools": ["GitHub", "JavaScript", "TypeScript", "Markdown", "CI/CD", "Git"],
+    "tools": [
+      "Flutter",
+      "Dart",
+      "go_router",
+      "Riverpod",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Git"
+    ],
     "achievements": [
-      "Merged 12+ pull requests across 5 different repositories.",
-      "Improved documentation coverage by 35%."
+      "Built a complete ERP backend solo — 21 modules, 48 PostgreSQL tables — as a 3rd-year undergrad.",
+      "Leading a team of 4 graduates while simultaneously owning the full backend architecture.",
+      "Project scope and client details confidential per NDA."
     ],
-    "icon": "globe"
+    "icon": "shield"
   },
   {
-    "id": "codecraft-intern",
-    "role": "Web Developer Intern",
-    "company": "CodeCraft Labs, Ahmedabad",
-    "startDate": "Apr 2022",
-    "endDate": "Jan 2023",
-    "duration": "10 months",
-    "isCurrent": false,
-    "location": "Ahmedabad, India",
-    "type": "Frontend Development",
+    "id": "education-utu",
+    "role": "B.Tech Computer Science & Engineering",
+    "company": "Uka Tarsadia University — AMTICS",
+    "startDate": "2024",
+    "endDate": "2028",
+    "duration": "4 Years",
+    "isCurrent": true,
+    "location": "Surat, Gujarat, India",
+    "type": "Education",
     "highlights": [
-      "Built interactive UIs and reusable components for client projects.",
-      "Integrated RESTful APIs and optimized frontend performance."
+      "Pursuing B.Tech in CSE at Asha M. Tarsadia Institute of Computer Science and Technology.",
+      "Current CGPA: 8.5",
+      "Actively building startups, freelance projects, and research work alongside academics."
     ],
-    "techStack": ["HTML", "CSS", "JavaScript", "React", "REST APIs"],
-    "responsibilities": [
-      "Developed responsive and interactive user interfaces using React.",
-      "Consumed RESTful APIs and managed application state.",
-      "Collaborated with designers to translate Figma mockups into pixel-perfect code.",
-      "Optimized frontend bundle size and rendering performance."
-    ],
-    "tools": ["HTML", "CSS", "JavaScript", "React", "REST APIs", "Figma", "Git"],
+    "techStack": [],
+    "responsibilities": [],
+    "tools": [],
     "achievements": [
-      "Delivered 5 client projects on time with zero critical bugs.",
-      "Reduced bundle size by 25% through tree shaking and code optimization."
+      "Maintaining 8.5 CGPA while simultaneously running a startup and freelance projects.",
+      "Built and shipped multiple production-grade products as an undergraduate."
     ],
-    "icon": "terminal"
+    "icon": "graduation"
+  },
+  {
+    "id": "education-ssse",
+    "role": "Higher Secondary (Science Stream)",
+    "company": "Sanskar Samruddhi School of Excellence",
+    "startDate": "2022",
+    "endDate": "2024",
+    "duration": "2 Years",
+    "isCurrent": false,
+    "location": "Navsari, Gujarat, India",
+    "type": "Education",
+    "highlights": [
+      "Completed 11th and 12th standard in Science stream.",
+      "Scored 68% in HSC Board examinations."
+    ],
+    "techStack": [],
+    "responsibilities": [],
+    "tools": [],
+    "achievements": [
+      "Completed higher secondary education with a foundation in Science and Mathematics."
+    ],
+    "icon": "book"
   }
 ]

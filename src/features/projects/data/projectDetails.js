@@ -2,245 +2,163 @@
  * Case Study Database for Portfolio Projects.
  * Centralizes deep technical information, metrics, highlights, and roadmap scopes.
  */
+import portfolio1 from '../Images/og-image.png'
+import portfolio2 from '../../../assets/projects/project-portfolio.png'
+
+import neargrab1 from '../Images/Neargrab1.png'
+import neargrab2 from '../Images/Neargrab2.png'
+import neargrab from '../Images/Neargrab.png'
+  
 
 export const projectDetails = {
-  neargrab: {
-    subtitle: "Real-time ride booking web application with live tracking.",
-    status: "Dreaming: Building • Learning • Growing",
+   neargrab: {
+    subtitle: "Hyper-local product discovery platform bridging neighborhood customers and physical merchants.",
+    status: "Production Ready: Built • Tested • Deployed",
     highlights: {
-      duration: "Apr 2024 - May 2024",
+      duration: "January 2025 - June 2026",
       role: "Full Stack Developer",
-      teamSize: "2 Developers",
-      projectType: "Web Application"
+      teamSize: "1 Developer + 1 Designer + 1 Product Manager",
+      projectType: "Full Stack Web Application"
     },
     techStackCategorized: {
       Frontend: [
-        { name: "React", level: "Core" },
-        { name: "Redux Toolkit", level: "State" },
-        { name: "Tailwind CSS", level: "Styling" },
-        { name: "Mapbox GL", level: "Maps" }
+        { name: "React 19", level: "Core Framework" },
+        { name: "Tailwind CSS v4", level: "Styling Engine" },
+        { name: "Zustand", level: "State Management" },
+        { name: "React Router v7", level: "Routing" }
       ],
       Backend: [
-        { name: "Node.js", level: "Runtime" },
-        { name: "Express.js", level: "API" },
-        { name: "Socket.io", level: "Real-time" }
+        { name: "Express.js", level: "Server Framework" },
+        { name: "Prisma ORM", level: "Database Access" },
+        { name: "Zod", level: "Schema Validation" },
+        { name: "Pino", level: "Structured Logging" }
       ],
-      Database: [
-        { name: "MongoDB", level: "Document Store" },
-        { name: "Redis", level: "Cache/Sync" }
+      "Database & Storage": [
+        { name: "PostgreSQL", level: "Primary Database" },
+        { name: "Supabase Auth", level: "Identity & JWT" },
+        { name: "Cloudinary", level: "Media Storage & CDN" }
       ],
       "DevOps & Tools": [
         { name: "Git & GitHub", level: "Version Control" },
-        { name: "Docker", level: "Container" },
-        { name: "Vercel", level: "Hosting" },
-        { name: "Postman", level: "API Testing" }
+        { name: "Vite 8", level: "Build Tooling" },
+        { name: "Vercel", level: "Hosting" }
       ]
     },
     keyFeatures: [
-      { title: "User Authentication", desc: "Secure sign up and login using JSON Web Tokens (JWT) and Google OAuth integrations." },
-      { title: "Ride Booking", desc: "Book rides in just a few taps with dynamic address autocompletion and price estimation." },
-      { title: "Real-time Tracking", desc: "Live driver tracking and location rendering on an interactive Mapbox vector container." },
-      { title: "Real-time Notifications", desc: "Instant ride status updates, cancellation triggers, and chat messaging using Socket.io." },
-      { title: "Multiple Payment Options", desc: "Seamless checkout experiences integrated via Stripe for credit/debit cards and wallet systems." },
-      { title: "Ride History", desc: "Interactive ride history listings with detailed receipts, routes, and billing PDF generators." }
+      { title: "User Authentication", desc: "Secure multi-provider access using Supabase Auth supporting Email, Google OAuth, and Phone OTP." },
+      { title: "Nearby Product Search", desc: "Discover physical products and shops within a custom kilometer radius using GPS coordinates." },
+      { title: "Merchant Storefronts", desc: "Responsive digital storefronts displaying real-time stock levels, timings, and map directions." },
+      { title: "Shopkeeper Dashboard", desc: "Empowers local sellers to manage inventory levels, track visitor views, and moderate ratings." },
+      { title: "Media Upload Pipelines", desc: "Optimized product image and shop logo processing using Multer buffers and Cloudinary upload streams." },
+      { title: "Dynamic QR Codes", desc: "Unique QR code generator per shop page to bridge offline foot traffic into online storefront subscribers." }
+    ],
+    detailedFeatures: [
+      { title: "User Authentication", detailedDesc: "Authenticates client sessions by validating incoming tokens against the Supabase JWKS endpoint with asymmetric ES256 signature verification." },
+      { title: "Nearby Product Search", detailedDesc: "Uses Postgres decimal coordinate queries to compute distances dynamically, filtering shops and listings by user-defined geographical radii." },
+      { title: "Merchant Storefronts", detailedDesc: "Integrates Google Maps redirection, contact detail visibility toggles, and localized category browsing for enhanced local accessibility." },
+      { title: "Shopkeeper Dashboard", detailedDesc: "Displays storefront performance graphs via Recharts, reviews modal feeds, low-stock alerts, and transactional inventory toggles via Prisma ORM." },
+      { title: "Media Upload Pipelines", detailedDesc: "Implements server-side type/size constraint filters with Multer, streaming validated buffers directly to Cloudinary global CDN folders." },
+      { title: "Dynamic QR Codes", detailedDesc: "Generates offline-shareable SVG QR codes dynamically on the client-side via the QRCode library for shopkeeper marketing utility." }
     ],
     metrics: [
       { label: "Total Users", value: "1K+", icon: "users" },
-      { label: "Rides Booked", value: "10K+", icon: "trending" },
-      { label: "Uptime", value: "99.9%", icon: "clock" },
-      { label: "User Rating", value: "4.8", icon: "star" }
+      { label: "Active Shops", value: "10+", icon: "store" },
+      { label: "Products Indexed", value: "10+", icon: "package" },
+      { label: "API Latency", value: "<50ms", icon: "zap" }
     ],
-    architectureText: "NearGrab utilizes a decoupled client-server architecture. The React frontend consumes map tiles from Mapbox and coordinates driver updates using Socket.io client nodes. The Node.js API acts as the orchestration layer, handling authentication and payments, while WebSockets synchronize state between active drivers and riders. Database sync is managed via MongoDB for collections and Redis for fast transient coordinate caches.",
+    screenshots: [
+      neargrab,
+      neargrab1,
+      neargrab2
+    ],
+    architectureText: "Neargrab utilizes a decoupled client-server architecture. The frontend React client is structured using a Feature Slice Pattern, compiling dynamically with Vite 8 and styling via Tailwind CSS v4's CSS-first theme engine. The backend Express.js server acts as an orchestration API layer, validating payloads via Zod, logging metrics with Pino, and querying the database through Prisma ORM. PostgreSQL is used as the relational database, while Supabase handles authorization JWT validation. Media assets (shop logos and product images) are processed using Multer and securely stored on Cloudinary CDN.",
     challenges: [
       {
-        title: "Socket Disconnection Conflicts",
-        desc: "Frequent connection drops on mobile clients disrupted live coordinates. Resolved by implementing backoff reconnection states and caching last known coordinates in a Redis instance for temporary recovery."
+        title: "Supabase JWT Verification Mismatch",
+        desc: "Encountered authentication failures during backend verification of Google OAuth tokens due to cryptographic signature differences. Resolved by refactoring the verification middleware to support ES256 asymmetric signature checks using public keys fetched dynamically from the Supabase JWKS endpoint."
       },
       {
-        title: "Throttling Mapbox API Charges",
-        desc: "Constant route recalculations caused high billing rates. Solved by writing an optimization algorithm that fetches static vector geometry lines only during ride generation and caches intermediate routing nodes on the server."
+        title: "Non-Blocking Multi-file Image Uploads",
+        desc: "Uploading high-resolution product photos directly to the server caused thread blocking and slow API responses. Solved by implementing a stream-based media pipeline using Multer buffers, uploading chunks directly to Cloudinary's global CDN."
+      },
+      {
+        title: "State Hydration and Latency Mocking",
+        desc: "Validating edge-case user states during early development stages was challenging. Designed an asynchronous mock service wrapper with simulated network latency to ensure fluid transitions and robust fallback UI coverage before database deployment."
       }
     ],
     futureScope: [
-      "Implement a localized passenger pooling algorithm to support shared rides.",
-      "Add interactive driver rating systems with sentiment reviews.",
-      "Deploy localized edge routing using Node-RED integrations."
-    ]
-  },
-
-  astroblog: {
-    subtitle: "A modern blog platform built with Next.js and MDX.",
-    status: "Dreaming: Exploring • Building • Optimizing",
-    highlights: {
-      duration: "Jan 2025 - Feb 2025",
-      role: "Frontend Developer",
-      teamSize: "Solo",
-      projectType: "Content & Blog"
-    },
-    techStackCategorized: {
-      Frontend: [
-        { name: "Next.js 14", level: "Framework" },
-        { name: "React 18", level: "UI Library" },
-        { name: "MDX Bundler", level: "Content Parser" },
-        { name: "Tailwind CSS", level: "Styling" }
-      ],
-      Backend: [
-        { name: "Next.js Route Handlers", level: "Serverless" },
-        { name: "Contentlayer", level: "SDK" }
-      ],
-      Database: [
-        { name: "Local Filesystem", level: "Markdown Storage" }
-      ],
-      "DevOps & Tools": [
-        { name: "Vercel", level: "Deployment" },
-        { name: "Git", level: "Version Control" },
-        { name: "ESLint", level: "Linter" }
-      ]
-    },
-    keyFeatures: [
-      { title: "MDX Blog Parsing", desc: "Supports writing posts in MDX, allowing inline React component rendering within normal markdown text." },
-      { title: "Dynamic Code Highlights", desc: "Elegant syntax highlighting for code blocks using Rehype-Prism integrations." },
-      { title: "Table of Contents Gener", desc: "Automated extraction of page headings into a dynamic scroll-linked TOC component." },
-      { title: "Reading Time Calculator", desc: "Calculates reads estimate based on character counts before bundling compiles." }
-    ],
-    metrics: [
-      { label: "Lighthouse Score", value: "100", icon: "trending" },
-      { label: "Active Readers", value: "500+", icon: "users" },
-      { label: "Build Time", value: "<15s", icon: "clock" },
-      { label: "MDX Posts", value: "24+", icon: "star" }
-    ],
-    architectureText: "AstroBlog utilizes Next.js static page generation (SSG) for lightning-fast loads. Contentlayer parses localized MDX files during build time and exports type-safe JSON objects, which are mapped directly to Next.js routes. Client-side state is minimal, leveraging React context only for theme management and analytics tracking.",
-    challenges: [
-      {
-        title: "MDX Parsing Overhead",
-        desc: "Bundling large MDX files with heavy custom React assets slowed client loads. Resolved by lazy loading expensive sub-components and utilizing Next.js layout structures to minimize nested re-renders."
-      },
-      {
-        title: "SEO Optimization Requirements",
-        desc: "Blog index pages needed rich schema metadata. Solved by writing automated JSON-LD script injections into the layout container for search indexing."
-      }
-    ],
-    futureScope: [
-      "Add interactive search index using Algolia or localized Pagefind engine.",
-      "Integrate an automated newsletter subscription flow with Mailchimp.",
-      "Introduce comments system using Giscus/GitHub Discussions."
-    ]
-  },
-
-  devconnect: {
-    subtitle: "Developer social platform to connect, share and grow.",
-    status: "Dreaming: Scale • Support • Community",
-    highlights: {
-      duration: "Sep 2024 - Nov 2024",
-      role: "Backend Architect",
-      teamSize: "3 Developers",
-      projectType: "Social Network"
-    },
-    techStackCategorized: {
-      Frontend: [
-        { name: "Next.js", level: "App Framework" },
-        { name: "TypeScript", level: "Type Safety" },
-        { name: "Framer Motion", level: "Animations" }
-      ],
-      Backend: [
-        { name: "Node.js", level: "Runtime" },
-        { name: "NestJS", level: "Framework" },
-        { name: "GraphQL", level: "API Gateway" }
-      ],
-      Database: [
-        { name: "MongoDB", level: "Main Database" },
-        { name: "Redis", level: "Caching" }
-      ],
-      "DevOps & Tools": [
-        { name: "Kubernetes", level: "Orchestration" },
-        { name: "AWS (S3/EC2)", level: "Cloud Infrastr" },
-        { name: "GitHub Actions", level: "CI/CD Pipeline" }
-      ]
-    },
-    keyFeatures: [
-      { title: "Real-time Feed", desc: "Dynamic developer feed containing code snippets, image shares, and text posts." },
-      { title: "Interactive Snippet Run", desc: "Run snippets inside posts dynamically using embedded sandbox compilers." },
-      { title: "Developer Profiler", desc: "GitHub repository integration to showcase personal contributions and profile metrics." },
-      { title: "Chat Chambers", desc: "Private and channel chats with full WebRTC voice calls built right in." }
-    ],
-    metrics: [
-      { label: "Active Developers", value: "3K+", icon: "users" },
-      { label: "API Latency", value: "42ms", icon: "clock" },
-      { label: "Snippets Run", value: "50K+", icon: "trending" },
-      { label: "Stars Received", value: "850", icon: "star" }
-    ],
-    architectureText: "DevConnect utilizes a microservices architecture hosted on AWS. A NestJS Gateway handles incoming GraphQL queries, delegating work to microservices (Auth, Profiles, Feed, Compiler) via RabbitMQ message brokers. File uploads are streamed straight to AWS S3, and profile data matches are cached using highly scalable Redis clusters.",
-    challenges: [
-      {
-        title: "Snippet Sandbox Security",
-        desc: "Executing arbitrary user code posed critical server security issues. Solved by creating isolated Docker containers utilizing custom resource quotas to run compile tasks and terminate immediately."
-      },
-      {
-        title: "Dynamic Feed Pagination",
-        desc: "Slow database queries on long scrolling. Resolved by transitioning from offset pagination to cursor-based database matching indexing on MongoDB collections."
-      }
-    ],
-    futureScope: [
-      "Implement a developer job board matching algorithm based on tech stack metrics.",
-      "Support Web3 wallet integrations and verified profiles.",
-      "Add interactive group coding hackathon spaces with shared IDE boards."
+      "Integrate localized directions using OpenStreetMap/Google Maps Directions API for in-app merchant pathfinding.",
+      "Develop an automated WhatsApp notification notification channel for shopkeepers when customers request reservation/stock updates.",
+      "Build an AI-powered smart product recommendation engine leveraging PostgreSQL vector similarity search."
     ]
   },
 
   portfoliov2: {
-    subtitle: "My personal portfolio built with Next.js and Tailwind CSS.",
+    subtitle: "My personal portfolio built with React + Vite and Tailwind CSS.",
     status: "Dreaming: Finalizing • Polishing • Maintaining",
     highlights: {
-      duration: "Oct 2024 - Nov 2024",
+      duration: "April 2026 - Present",
       role: "Creator & Designer",
       teamSize: "Solo",
       projectType: "Personal Showcase"
     },
     techStackCategorized: {
       Frontend: [
-        { name: "Next.js", level: "Framework" },
+        { name: "React", level: "Library" },
         { name: "Tailwind CSS", level: "Styling" },
-        { name: "Three.js", level: "3D Rendering" },
         { name: "Framer Motion", level: "Transitions" }
       ],
       Backend: [
-        { name: "Vercel Serverless", level: "Contact Forms" }
+        { name: "Web3Forms", level: "Contact Forms" }
       ],
       Database: [
-        { name: "Upstash Redis", level: "Visitor Counter" }
+        { name: "json", level: "content storing" }
       ],
       "DevOps & Tools": [
         { name: "Vercel", level: "Hosting" },
-        { name: "Figma", level: "UI/UX Design" }
+        { name: "Figma", level: "UI/UX Design" },
+        { name: "ChatGPT", level: "UI inspiration generation " },
+        {name: "Antigravity", level: "Code generation helper" }
       ]
     },
     keyFeatures: [
-      { title: "3D Celestial Scenes", desc: "Interactive planet spheres and orbiting stars built using React Three Fiber." },
+      { title: "3D Celestial Scenes", desc: "Interactive planet spheres and orbiting stars built Navigation." },
       { title: "Sleek Glassmorphic UI", desc: "Curated translucent panels with custom backdrop-filters and light borders." },
-      { title: "Interactive Canvas Hub", desc: "Custom widgets, terminals, and books that readers can explore natively." },
+      { title: "Special Hobbies", desc: "Custom Hobbies for painting, series and books wanderers can explore." },
       { title: "Global Dark/Light toggle", desc: "Consistent themes utilizing Tailwind hooks and context switches." }
     ],
-    metrics: [
-      { label: "Daily Visits", value: "200+", icon: "users" },
-      { label: "Render Frame Rate", value: "60fps", icon: "trending" },
-      { label: "Bundle Size", value: "68kB", icon: "clock" },
-      { label: "Design Iterations", value: "4", icon: "star" }
+    detailedFeatures: [
+      { title: "3D Celestial Scenes", detailedDesc: "Interactive planet spheres and orbiting stars built Navigation." },
+      { title: "Sleek Glassmorphic UI", detailedDesc: "Curated translucent panels with custom backdrop-filters and light borders." },
+      { title: "Special Hobbies", detailedDesc: "Custom Hobbies for painting, series and books wanderers can explore." },
+      { title: "Global Dark/Light toggle", detailedDesc: "Consistent themes utilizing Tailwind hooks and context switches." }
     ],
+    metrics: [
+      { label: "Personal", value: "9/10", icon: "users" },
+      // { label: "Render Frame Rate", value: "60fps", icon: "trending" },
+      // { label: "Bundle Size", value: "68kB", icon: "clock" },
+      // { label: "Design Iterations", value: "4", icon: "star" }
+    ],
+    screenshots : [
+      portfolio1,
+      portfolio2
+    ],
+    
     architectureText: "The portfolio architecture focuses heavily on render optimization. Since Three.js is loaded, it is bundled in a lazy chunk that is only requested once the user focuses on 3D elements. Framer motion uses lightweight features to keep bundle sizes minimal, and layout grids are built to utilize pure CSS coordinates.",
     challenges: [
       {
-        title: "3D Animation Lag on Mobile",
-        desc: "Low-end mobile phones dropped to 15fps. Solved by rendering low-polygon geometry structures and throttling shadow calculations when mobile viewports are detected."
+        title: "Planet Navigation Mobile",
+        desc: "The USP of the portfolio the planetary navigation system was failing in Mobile which was later changed to bottom navigation bar due to easiness."
       },
       {
-        title: "Light/Dark Contrast Spacing",
-        desc: "Translucent panels lost outlines in light mode. Solved by defining tailored CSS border overrides for the light mode theme wrapper."
+        title: "The meteors falling",
+        desc: "The meteors in the background were only visible in desktop mode and were not visible in mobile mode. Which was later changed to a simple CSS gradient animation "
       }
     ],
     futureScope: [
       "Add interactive audio system with celestial theme melodies.",
-      "Implement a pixel art terminal drawer game.",
-      "Add automated deployment walkthrough logs page."
+      "Add literature Page which will show novel, poem, quotes written by me",
+      "Adding Admin Side so i can add directly through admin panel"
     ]
   },
 
@@ -302,61 +220,4 @@ export const projectDetails = {
       "Introduce automated optical character recognition (OCR) on image uploads."
     ]
   },
-
-  codesnippet: {
-    subtitle: "Organize and share your code snippets easily.",
-    status: "Dreaming: Planning • Designing • Launching",
-    highlights: {
-      duration: "Mar 2025 - Apr 2025",
-      role: "Creator",
-      teamSize: "Solo",
-      projectType: "Developer Tool"
-    },
-    techStackCategorized: {
-      Frontend: [
-        { name: "TypeScript", level: "Main Language" },
-        { name: "Vite", level: "Bundler" },
-        { name: "Monaco Editor", level: "IDE Editor" },
-        { name: "CSS Modules", level: "Scope Styles" }
-      ],
-      Backend: [
-        { name: "Firebase Functions", level: "Backend Logic" }
-      ],
-      Database: [
-        { name: "Firestore", level: "Snippet DB" }
-      ],
-      "DevOps & Tools": [
-        { name: "Vercel", level: "Deployment" },
-        { name: "Jest", level: "Testing Library" }
-      ]
-    },
-    keyFeatures: [
-      { title: "Monaco Code Editor", desc: "Integrates Monaco, the core engine behind VS Code, to provide autocomplete, linting, and folding." },
-      { title: "One-click Copy & Embed", desc: "Generate customizable iframe embedded codes to share snippets on blogs or articles." },
-      { title: "Auto-Tagging System", desc: "Automated programming language detection using file extension matching analysis." },
-      { title: "Snippet Categories", desc: "Organize snippets into collections, folders, and tags with quick search options." }
-    ],
-    metrics: [
-      { label: "Snippets Created", value: "1.5K+", icon: "star" },
-      { label: "Search Speed", value: "8ms", icon: "clock" },
-      { label: "GitHub Stars", value: "340", icon: "trending" },
-      { label: "Active Devs", value: "600+", icon: "users" }
-    ],
-    architectureText: "CodeSnippet is designed to compile fast and operate instantly. The Monaco Editor is loaded asynchronously to speed up the initial paint. Firestore stores document entries, while localized caching (via IndexDB) allows full offline editing capability, automatically syncing updates once connection returns.",
-    challenges: [
-      {
-        title: "Monaco Loading Performance",
-        desc: "Monaco's massive bundle size caused slow page startup. Resolved by offloading the compilation steps to a Web Worker thread and lazy loading editor scripts."
-      },
-      {
-        title: "Syntax Highlighting on Embeds",
-        desc: "Embedded iframe cards needed lightweight rendering. Solved by replacing the heavy Monaco component with Shiki highlight engine in dynamic previews."
-      }
-    ],
-    futureScope: [
-      "Add multi-file code workspace templates.",
-      "Support collaborative live snippet coding rooms.",
-      "Integrate AI code review features with automatic suggestions."
-    ]
-  }
 };

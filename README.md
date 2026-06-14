@@ -84,7 +84,7 @@ A monochromatic UI configured with custom CSS variables that transition smoothly
 ## 📂 Project Structure
 
 ```bash
-temp-portfolio/
+portfolio-v2/
 ├── .agent/                  # Custom developer agent workflows & design instructions
 │   └── skills/ui-ux-pro-max # UI/UX design intelligence systems
 ├── assets/                  # Shared images, logos, and planet maps
@@ -123,8 +123,8 @@ Ensure you have **Node.js (v18.x or later)** and **npm** installed.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AbdulKadir-22/temp-portfolio.git
-   cd temp-portfolio
+   git clone https://github.com/AbdulKadir-22/portfolio-v2.git
+   cd portfolio-v2
    ```
 
 2. Install dependencies:
@@ -150,7 +150,7 @@ In the project directory, you can run:
 
 ## 🎨 Design System System Overview
 
-The site's visual language is guided by rules detailed in [MASTER.md](file:///home/ariont/Code/Personal/temp-portfolio/design-system/abdulkadir-portfolio/MASTER.md):
+The site's visual language is guided by rules detailed in [MASTER.md](file:///home/ariont/Code/Personal/portfolio-v2/design-system/abdulkadir-portfolio/MASTER.md):
 
 *   **Primary Color:** Zinc-900 (`#18181B`) / Dark, solid primary base
 *   **Secondary Color:** Zinc-600 (`#3F3F46`) / Muted accents

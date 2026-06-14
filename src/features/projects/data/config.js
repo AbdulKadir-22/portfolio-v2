@@ -1,27 +1,22 @@
 import projectsData from './projects.json';
 
 // Import local project cover images
-import astroblogImg from '../../../assets/projects/project-astroblog.png';
-import devconnectImg from '../../../assets/projects/project-devconnect.png';
-import portfoliov2Img from '../../../assets/projects/project-portfoliov2.png';
-import neargrabImg from '../../../assets/projects/project-neargrab.png';
+import portfoliov2Img from '../../../assets/projects/project-portfolio.png';
+import neargrabImg from '../Images/Neargrab.png';
 import portyoursImg from '../../../assets/projects/project-portyours.png';
-import codesnippetImg from '../../../assets/projects/project-codesnippet.png';
 
 // Map image assets to project ids
 const imageMapping = {
-  astroblog: astroblogImg,
-  devconnect: devconnectImg,
   portfoliov2: portfoliov2Img,
   neargrab: neargrabImg,
   portyours: portyoursImg,
-  codesnippet: codesnippetImg
 };
 
 // Merge JSON projects with actual imported images
 export const projects = projectsData.map((project) => ({
   ...project,
   image: imageMapping[project.id] || null
+  
 }));
 
 // Page configuration matching design mockup text

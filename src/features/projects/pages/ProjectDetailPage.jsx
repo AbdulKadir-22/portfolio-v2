@@ -36,6 +36,18 @@ const ProjectDetailPage = () => {
     return projectDetails[id] || null;
   }, [id]);
 
+  // Dynamic screenshots list based on project details, with fallbacks to cover image and placeholder images
+  const screenshots = useMemo(() => {
+    if (details?.screenshots && details.screenshots.length > 0) {
+      return details.screenshots;
+    }
+    return [
+      baseProject?.image,
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=480&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=480&q=80"
+    ].filter(Boolean);
+  }, [details, baseProject]);
+
   // Active Tab State (tracked by scrollspy or manual tab click)
   const [activeTab, setActiveTab] = useState('overview');
   
@@ -117,18 +129,13 @@ const ProjectDetailPage = () => {
 
   // Slider navigation
   const prevScreenshot = () => {
-    setCurrentScreenshotIdx((prev) => (prev === 0 ? 2 : prev - 1));
+    if (screenshots.length <= 1) return;
+    setCurrentScreenshotIdx((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
   };
   const nextScreenshot = () => {
-    setCurrentScreenshotIdx((prev) => (prev === 2 ? 0 : prev + 1));
+    if (screenshots.length <= 1) return;
+    setCurrentScreenshotIdx((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
   };
-
-  // Static mock screenshots for slider
-  const mockScreenshots = [
-    baseProject.image,
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=480&q=80",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=480&q=80"
-  ];
 
   // Click handler to scroll to corresponding section inside AppLayout scrollbar container
   const handleTabClick = (tabId) => {
@@ -161,7 +168,7 @@ const ProjectDetailPage = () => {
         "@type": "Person",
         "name": "Abdulkadir Shaikh"
       },
-      "url": `https://demo.shaikh.dev/${id}`,
+      "url": baseProject.liveLink || `https://demo.shaikh.dev/${id}`,
       "applicationCategory": "WebApplication"
     };
   }, [id, baseProject, details]);
@@ -286,7 +293,7 @@ const ProjectDetailPage = () => {
               {/* Action Buttons */}
               <div className="flex items-center gap-3 border-t border-dashed pt-3 border-white/5">
                 <a
-                  href={`https://demo.shaikh.dev/${baseProject.id}`}
+                  href={baseProject.liveLink || `https://demo.shaikh.dev/${baseProject.id}`}
                   target="_blank"
                   rel="noreferrer"
                   className={`
@@ -302,7 +309,7 @@ const ProjectDetailPage = () => {
                 </a>
 
                 <a
-                  href={`https://github.com/AbdulKadir-22/${baseProject.id}`}
+                  href={baseProject.githubLink || `https://github.com/AbdulKadir-22/${baseProject.id}`}
                   target="_blank"
                   rel="noreferrer"
                   className={`
@@ -422,13 +429,13 @@ const ProjectDetailPage = () => {
 
                 <div className="w-full aspect-[16/9] rounded-xl overflow-hidden border border-white/5 relative bg-black/20 flex items-center justify-center">
                   <img
-                    src={mockScreenshots[currentScreenshotIdx]}
+                    src={screenshots[currentScreenshotIdx]}
                     alt="Project Screenshot"
                     className="w-full h-full object-cover transition-all duration-500"
                   />
                   
                   <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
-                    {mockScreenshots.map((_, dotIdx) => (
+                    {screenshots.map((_, dotIdx) => (
                       <button
                         key={dotIdx}
                         onClick={() => setCurrentScreenshotIdx(dotIdx)}
@@ -524,7 +531,7 @@ const ProjectDetailPage = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                {mockScreenshots.map((scr, idx) => (
+                {screenshots.map((scr, idx) => (
                   <div
                     key={idx}
                     className={`
