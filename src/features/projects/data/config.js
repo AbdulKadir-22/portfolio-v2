@@ -3,13 +3,17 @@ import projectsData from './projects.json';
 // Import local project cover images
 import portfoliov2Img from '../../../assets/projects/project-portfolio.png';
 import neargrabImg from '../Images/Neargrab.png';
-import portyoursImg from '../../../assets/projects/project-portyours.png';
+import portyoursImg from '../Images/portyours/portyours.png';
+import amaal2 from '../Images/amaal/amaal2.png';
+import bitsImg from '../Images/bits/dashboard.jpeg';
 
 // Map image assets to project ids
 const imageMapping = {
   portfoliov2: portfoliov2Img,
   neargrab: neargrabImg,
+  ramazaanAmaal: amaal2,
   portyours: portyoursImg,
+  bits: bitsImg,
 };
 
 // Merge JSON projects with actual imported images

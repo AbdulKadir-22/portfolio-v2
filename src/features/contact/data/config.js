@@ -24,7 +24,7 @@ export const contactConfig = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/abdul-kadir-shaikh-47ab9a357/",
       color: "blue",
     },
     {
@@ -36,7 +36,7 @@ export const contactConfig = {
     {
       id: "instagram",
       label: "Instagram",
-      url: "https://instagram.com",
+      url: "https://instagram.com/abdulkadir.java",
       color: "gold",
     },
     {

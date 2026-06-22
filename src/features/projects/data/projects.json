@@ -1,20 +1,5 @@
 [
   {
-    "id": "portfoliov2",
-    "title": "Portfolio v2",
-    "category": "webapps",
-    "badge": "Web App",
-    "starred": true,
-    "description": "My personal portfolio built with Vite + React and Tailwind CSS.",
-    "techStack": [
-      { "name": "React", "logo": "N" },
-      { "name": "Tailwind", "logo": "CSS" },
-      { "name": "JavaScript", "logo": "JS" }
-    ],
-    "liveLink": "https://abdulkadir.in",
-    "githubLink": "https://github.com/AbdulKadir-22/portfolio-v2"
-  },
-  {
     "id": "neargrab",
     "title": "NearGrab",
     "category": "fullstack",
@@ -30,18 +15,65 @@
     "githubLink": "https://github.com/NearGrab"
   },
   {
+    "id": "ramazaanAmaal",
+    "title": "Ramazaan Amaal",
+    "category": "mobile",
+    "badge": "Mobile App",
+    "starred": true,
+    "description": "A comprehensive Ramazaan Amaal and Ibaadah Tracker designed to help the Ummah maintain daily consistency and spiritual growth.",
+    "techStack": [
+      { "name": "Flutter", "logo": "FLUTTER" },
+      { "name": "Dart", "logo": "DART" },
+      { "name": "Node.js", "logo": "NODE" }
+    ],
+    "liveLink": "https://play.google.com/store/apps/details?id=in.abdulkadir.ramazaan_tracker",
+    "githubLink": "https://github.com/AbdulKadir-22/Ramazaan-Amaal"
+  },
+  {
+    "id": "portfoliov2",
+    "title": "Portfolio v2",
+    "category": "webapps",
+    "badge": "Web App",
+    "starred": true,
+    "description": "My personal portfolio built with Vite + React and Tailwind CSS.",
+    "techStack": [
+      { "name": "React", "logo": "N" },
+      { "name": "Tailwind", "logo": "CSS" },
+      { "name": "JavaScript", "logo": "JS" }
+    ],
+    "liveLink": "https://abdulkadir.in",
+    "githubLink": "https://github.com/AbdulKadir-22/portfolio-v2"
+  },
+  
+  {
     "id": "portyours",
     "title": "PortYours",
     "category": "webapps",
     "badge": "Web App",
     "starred": true,
-    "description": "Cloud storage solution with file sharing and previews.",
+    "description": "Dynamic developer portfolio builder and hosting platform bridging profile personalization and instant sharing.",
     "techStack": [
       { "name": "React", "logo": "R" },
       { "name": "TypeScript", "logo": "TS" },
-      { "name": "Tailwind", "logo": "CSS" }
+      { "name": "Express.js", "logo": "NODE" }
+      
     ],
     "liveLink": "https://portyours.vercel.app",
     "githubLink": "https://github.com/AbdulKadir-22/portyours"
+  },
+  {
+    "id": "bits",
+    "title": "Bits",
+    "category": "mobile",
+    "badge": "Mobile Application",
+    "starred": true,
+    "description": "A local-first mobile productivity application with habit tracking and daily consistency tools.",
+    "techStack": [
+      { "name": "Flutter", "logo": "FLUTTER" },
+      { "name": "Dart", "logo": "DART" },
+      { "name": "Riverpod", "logo": "RIVERPOD" }
+    ],
+    "liveLink": "https://play.google.com/store/apps/details?id=in.abdulkadir.bits",
+    "githubLink": "https://github.com/AbdulKadir-22/bits"
   }
 ]

@@ -168,4 +168,4 @@ The site's visual language is guided by rules detailed in [MASTER.md](file:///ho
 *   **Website:** [https://abdulkadir.in](https://abdulkadir.in)
 *   **Email:** [contact@abdulkadir.in](mailto:contact@abdulkadir.in)
 *   **GitHub:** [@AbdulKadir-22](https://github.com/AbdulKadir-22)
-*   **LinkedIn:** [LinkedIn Profile](https://linkedin.com)
+*   **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/abdul-kadir-shaikh-47ab9a357/)

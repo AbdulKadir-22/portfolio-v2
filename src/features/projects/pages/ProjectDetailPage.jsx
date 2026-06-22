@@ -567,35 +567,6 @@ const ProjectDetailPage = () => {
                 {details.architectureText}
               </p>
 
-              {/* Blueprint Flowchart */}
-              <div className={`p-6 rounded-xl border flex flex-col md:flex-row items-center justify-between gap-6 ${
-                isDark ? 'bg-slate-950/40 border-white/5' : 'bg-slate-100/50 border-slate-200'
-              }`}>
-                <div className={`w-full md:w-[28%] p-4 rounded-xl border text-center ${
-                  isDark ? 'bg-[#0C0A09] border-white/10' : 'bg-white border-slate-200'
-                }`}>
-                  <h5 className="text-xs font-black uppercase tracking-wider text-blue-500 mb-1">CLIENT CONTAINER</h5>
-                  <p className={`text-[10px] ${isDark ? 'text-white/45' : 'text-slate-500'}`}>React Application State, Mapbox Engine Layers, Websocket Handler Listener.</p>
-                </div>
-
-                <div className={`hidden md:block w-8 h-[2px] ${isDark ? 'bg-white/20' : 'bg-slate-300'}`} />
-
-                <div className={`w-full md:w-[28%] p-4 rounded-xl border text-center ${
-                  isDark ? 'bg-[#0C0A09] border-white/10' : 'bg-white border-slate-200'
-                }`}>
-                  <h5 className="text-xs font-black uppercase tracking-wider text-yellow-500 mb-1">ORCHESTRATOR API</h5>
-                  <p className={`text-[10px] ${isDark ? 'text-white/45' : 'text-slate-500'}`}>Express Server Handlers, JSON Web Tokens Validator, Redis Cache Queue Worker.</p>
-                </div>
-
-                <div className={`hidden md:block w-8 h-[2px] ${isDark ? 'bg-white/20' : 'bg-slate-300'}`} />
-
-                <div className={`w-full md:w-[28%] p-4 rounded-xl border text-center ${
-                  isDark ? 'bg-[#0C0A09] border-white/10' : 'bg-white border-slate-200'
-                }`}>
-                  <h5 className="text-xs font-black uppercase tracking-wider text-purple-500 mb-1">DATABASE STORAGE</h5>
-                  <p className={`text-[10px] ${isDark ? 'text-white/45' : 'text-slate-500'}`}>MongoDB collections storing transactional metrics, history coordinates logs database.</p>
-                </div>
-              </div>
             </section>
 
             {/* SECTION 6: CHALLENGES */}

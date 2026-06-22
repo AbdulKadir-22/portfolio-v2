@@ -71,10 +71,10 @@ const AppLayout = () => {
         {/* Fixed UI Elements */}
         <ThemeToggle />
         <div className="fixed top-6 right-6 z-50 flex items-center gap-2.5 sm:gap-3">
-          <LiteratureButton />
+          {/* <LiteratureButton /> */}
           <ResumeButton />
         </div>
-        <NowPlayingCard />
+        {/* <NowPlayingCard /> */}
 
         {/* Meteor Pieces */}
         <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[44vw] min-w-[320px] max-w-[720px] overflow-hidden">
