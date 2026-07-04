@@ -1,5 +1,20 @@
 [
   {
+    "id": "pulse",
+    "title": "PULSE",
+    "category": "fullstack",
+    "badge": "Full Stack",
+    "starred": true,
+    "description": "A real-time smart city emergency traffic management and routing system using shortest-path algorithms, V2I signal preemption, and edge computer vision.",
+    "techStack": [
+      { "name": "Flutter", "logo": "FLUTTER" },
+      { "name": "FastAPI", "logo": "FASTAPI" },
+      { "name": "Python", "logo": "PYTHON" }
+    ],
+    "liveLink": "",
+    "githubLink": "https://github.com/AbdulKadir-22"
+  },
+  {
     "id": "neargrab",
     "title": "NearGrab",
     "category": "fullstack",
@@ -19,7 +34,7 @@
     "title": "Ramazaan Amaal",
     "category": "mobile",
     "badge": "Mobile App",
-    "starred": true,
+    "starred": false,
     "description": "A comprehensive Ramazaan Amaal and Ibaadah Tracker designed to help the Ummah maintain daily consistency and spiritual growth.",
     "techStack": [
       { "name": "Flutter", "logo": "FLUTTER" },
@@ -34,7 +49,7 @@
     "title": "Portfolio v2",
     "category": "webapps",
     "badge": "Web App",
-    "starred": true,
+    "starred": false,
     "description": "My personal portfolio built with Vite + React and Tailwind CSS.",
     "techStack": [
       { "name": "React", "logo": "N" },
@@ -50,7 +65,7 @@
     "title": "PortYours",
     "category": "webapps",
     "badge": "Web App",
-    "starred": true,
+    "starred": false,
     "description": "Dynamic developer portfolio builder and hosting platform bridging profile personalization and instant sharing.",
     "techStack": [
       { "name": "React", "logo": "R" },
@@ -66,7 +81,7 @@
     "title": "Bits",
     "category": "mobile",
     "badge": "Mobile Application",
-    "starred": true,
+    "starred": false,
     "description": "A local-first mobile productivity application with habit tracking and daily consistency tools.",
     "techStack": [
       { "name": "Flutter", "logo": "FLUTTER" },

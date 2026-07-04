@@ -6,9 +6,11 @@ import neargrabImg from '../Images/Neargrab.png';
 import portyoursImg from '../Images/portyours/portyours.png';
 import amaal2 from '../Images/amaal/amaal2.png';
 import bitsImg from '../Images/bits/dashboard.jpeg';
+import pulseImg from '../Images/pulse/pulse.png';
 
 // Map image assets to project ids
 const imageMapping = {
+  pulse: pulseImg,
   portfoliov2: portfoliov2Img,
   neargrab: neargrabImg,
   ramazaanAmaal: amaal2,
@@ -31,8 +33,10 @@ export const projectConfig = {
     { id: 'all', label: 'All Projects' },
     { id: 'webapps', label: 'Web Apps' },
     { id: 'fullstack', label: 'Full Stack' },
+    { id: 'mobile', label: 'Mobile Apps' },
     { id: 'tools', label: 'Tools' },
-    { id: 'opensource', label: 'Open Source' }
+    { id: 'opensource', label: 'Open Source' },
+    
   ],
   stats: [
     { label: 'Projects Built', value: '12+', color: 'purple' },

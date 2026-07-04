@@ -36,6 +36,22 @@ const ProjectDetailPage = () => {
     return projectDetails[id] || null;
   }, [id]);
 
+  const projectSchema = useMemo(() => {
+    if (!baseProject) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": baseProject.title,
+      "description": baseProject.description || (details ? details.subtitle : ''),
+      "author": {
+        "@type": "Person",
+        "name": "Abdulkadir Shaikh"
+      },
+      "url": baseProject.liveLink || `https://demo.shaikh.dev/${id}`,
+      "applicationCategory": "WebApplication"
+    };
+  }, [id, baseProject, details]);
+
   // Dynamic screenshots list based on project details, with fallbacks to cover image and placeholder images
   const screenshots = useMemo(() => {
     if (details?.screenshots && details.screenshots.length > 0) {
@@ -67,7 +83,6 @@ const ProjectDetailPage = () => {
       const elements = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
       if (elements.length === 0) return;
 
-      const containerRect = scrollContainer.getBoundingClientRect();
       let currentActive = sectionIds[0];
 
       for (const el of elements) {
@@ -156,22 +171,6 @@ const ProjectDetailPage = () => {
       });
     }
   };
-
-  const projectSchema = useMemo(() => {
-    if (!baseProject) return null;
-    return {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": baseProject.title,
-      "description": baseProject.description || (details ? details.subtitle : ''),
-      "author": {
-        "@type": "Person",
-        "name": "Abdulkadir Shaikh"
-      },
-      "url": baseProject.liveLink || `https://demo.shaikh.dev/${id}`,
-      "applicationCategory": "WebApplication"
-    };
-  }, [id, baseProject, details]);
 
   const pageDescription = baseProject?.description || details?.subtitle || '';
   const pageOgImage = baseProject?.image ? (baseProject.image.startsWith('http') ? baseProject.image : `https://abdulkadir.in${baseProject.image}`) : 'https://abdulkadir.in/og-image.png';
@@ -646,21 +645,24 @@ const ProjectDetailPage = () => {
                 { label: "Role", value: details.highlights.role, icon: MapPin },
                 { label: "Team Size", value: details.highlights.teamSize, icon: Users },
                 { label: "Project Type", value: details.highlights.projectType, icon: Cpu }
-              ].map(({ label, value, icon: HighlightIcon }) => (
-                <div key={label} className="flex items-start gap-3">
-                  <div className={`p-1.5 rounded-lg ${isDark ? 'bg-white/5 text-white/50' : 'bg-slate-100 text-slate-400'}`}>
-                    <HighlightIcon size={14} />
+              ].map(({ label, value, icon }) => {
+                const IconComponent = icon;
+                return (
+                  <div key={label} className="flex items-start gap-3">
+                    <div className={`p-1.5 rounded-lg ${isDark ? 'bg-white/5 text-white/50' : 'bg-slate-100 text-slate-400'}`}>
+                      <IconComponent size={14} />
+                    </div>
+                    <div className="flex flex-col gap-0.5">
+                      <span className={`text-[10px] font-semibold tracking-wider ${isDark ? 'text-white/40' : 'text-slate-400'}`}>
+                        {label}
+                      </span>
+                      <span className="text-xs font-bold tracking-wide">
+                        {value}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-0.5">
-                    <span className={`text-[10px] font-semibold tracking-wider ${isDark ? 'text-white/40' : 'text-slate-400'}`}>
-                      {label}
-                    </span>
-                    <span className="text-xs font-bold tracking-wide">
-                      {value}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 

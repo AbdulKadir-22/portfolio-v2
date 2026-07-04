@@ -19,8 +19,98 @@ import bits3 from '../Images/bits/playstoress.png'
 import portyours1 from '../Images/portyours/portfolio.png'
 import portyours2 from '../Images/portyours/portyours.png'
 
+import pulse from '../Images/pulse/pulse.png'
+import pulse1 from '../Images/pulse/pulse1.png'
+import pulse2 from '../Images/pulse/pulse2.png'
+import pulse3 from '../Images/pulse/pulse3.png'
+
 
 export const projectDetails = {
+  pulse: {
+    "subtitle": "A real-time smart city emergency traffic management and routing system using shortest-path algorithms, V2I signal preemption, and edge computer vision.",
+    "status": "Production Ready: Built • Tested",
+    "highlights": {
+      "duration": "January 2026 - June 2026",
+      "role": "Frontend Developer",
+      "teamSize": "3 Developers",
+      "projectType": "V2I Traffic Control & Emergency Routing Platform"
+    },
+    "techStackCategorized": {
+      "Frontend": [
+        { "name": "Flutter 3.x", "level": "Cross-Platform Mobile Core" },
+        { "name": "Vue 3", "level": "Web Portal Engine" },
+        { "name": "Riverpod", "level": "Mobile State Management" },
+        { "name": "Pinia", "level": "Web State Management" },
+        { "name": "GoRouter", "level": "Mobile Navigation" },
+        { "name": "Leaflet & flutter_map", "level": "Geospatial Rendering" }
+      ],
+      "Database & Storage": [
+        { "name": "SQLite", "level": "Local SQL Persistence" },
+        { "name": "SQLAlchemy", "level": "Python ORM Model Mapper" },
+        { "name": "flutter_secure_storage", "level": "Encrypted Token Cache" },
+        { "name": "OSM Graph Cache", "level": "Serialized Spatial Indexes" }
+      ],
+      "DevOps & Tools": [
+        { "name": "FastAPI", "level": "Backend Core Engine" },
+        { "name": "Uvicorn", "level": "Asynchronous Web Server" },
+        { "name": "OpenCV", "level": "Real-time Video Processing" },
+        { "name": "Ultralytics YOLOv8", "level": "Edge Computer Vision Model" }
+      ],
+      "Utilities & OS APIs": [
+        { "name": "WebSockets", "level": "Real-Time Telemetry & Alerts" },
+        { "name": "OSRM (Open Source Routing Machine)", "level": "Road Polyline Projection" },
+        { "name": "Geolocator", "level": "Native GPS Tracking API" }
+      ]
+    },
+    "keyFeatures": [
+      { "title": "Dual-App Mobile Ecosystem", "desc": "Decoupled Flutter apps for ambulance drivers (telemetry, navigation, auto-drive) and operators (central command panel, intersection monitors)." },
+      { "title": "Real-Time Green Corridors", "desc": "Automatically clears upcoming intersections along the route by altering traffic signals to emergency mode, forcing green phases based on GPS proximity." },
+      { "title": "Dynamic Pathfinding Engine", "desc": "Implements classical and state-of-the-art algorithms, including Dijkstra, A*, and a breakthrough 2025 SSSP algorithm with a live step-by-step visualizer." },
+      { "title": "Edge AI Vehicle Detection", "desc": "Deploys YOLOv8 Nano on traffic camera feeds at intersection nodes, counting vehicles to calculate live congestion weight dynamics." },
+      { "title": "Low-Latency WebSocket Room Manager", "desc": "Orchestrates instant messaging rooms for driver pings, operator alarms, and visualizer events with sub-100ms latency." },
+      { "title": "Citizen Dispatch Tracking", "desc": "Features a public Vue 3 portal where emergency callers can search tracking numbers to see their assigned ambulance moving in real-time." }
+    ],
+    "detailedFeatures": [
+      { "title": "Dual-App Mobile Ecosystem", "detailedDesc": "Maintains split user experiences: drivers see maps, GPS states, and active dispatches, while operators monitor city-wide signals, hotspots, and vehicle telemetry using reactive Riverpod states." },
+      { "title": "Real-Time Green Corridors", "detailedDesc": "Monitors active vehicle positions and automatically sets the status of intersections along the A* computed route to green, restoring automatic operation after the vehicle exits." },
+      { "title": "Dynamic Pathfinding Engine", "detailedDesc": "Supports multi-algorithm routing (Dijkstra, A*, Bellman-Ford, Floyd-Warshall) and Duan's 2025 breakthrough SSSP, caching spatial nodes in memory for rapid computation." },
+      { "title": "Edge AI Vehicle Detection", "detailedDesc": "Detects cars, buses, and trucks on edge feeds, converting counts into dynamic edge weights that update the central pathfinder every 2 seconds to bypass traffic blocks." },
+      { "title": "Low-Latency WebSocket Room Manager", "detailedDesc": "Handles active socket collections in FastAPI using custom pub-sub channels, mapping drivers and operators to separate rooms for targeted broadcast messages." },
+      { "title": "Citizen Dispatch Tracking", "detailedDesc": "Interacts with Vue 3 and Leaflet on the client side, fetching GPS coordinates of active ambulances through secure queries and projecting travel ETA using OSRM." }
+    ],
+    "metrics": [
+      { "label": "Pathfinding Cost", "value": "<5ms", "icon": "zap" },
+      { "label": "WebSocket Latency", "value": "<50ms", "icon": "trending" },
+      { "label": "Edge AI Inference", "value": "30+ FPS", "icon": "database" },
+      { "label": "Traffic Update Sync", "value": "2.0s", "icon": "users" }
+    ],
+    "screenshots": [
+      pulse,
+      pulse1,
+      pulse2,
+      pulse3
+    ],
+    "architectureText": "PULSE is built on a distributed client-server architecture consisting of a FastAPI backend, dual Flutter mobile applications, and Vue 3 web portals. The backend utilizes SQLAlchemy over a SQLite database, integrating a custom WebSocket manager for bi-directional live communication. OpenStreetMap (OSM) graph data is parsed and cached, enabling the server to run custom pathfinding algorithms (such as Dijkstra, A*, and the sub-Dijkstra 2025 Breakthrough algorithm) alongside OSRM road coordinates. Edge intelligence is achieved by deploying YOLOv8 models to estimate traffic density at intersections, feeding raw statistics back to the core routing engine. The client apps leverage Riverpod and Leaflet/flutter_map for decoupled state management and geospatial rendering.",
+    "challenges": [
+      {
+        "title": "Real-Time High-Frequency GPS Tracking",
+        "desc": "Constant HTTP pings from multiple active vehicles could overwhelm standard API routes. Resolved by implementing persistent WebSocket connections with lightweight JSON payloads, reducing connection overhead and latency down to <50ms."
+      },
+      {
+        "title": "Sub-Dijkstra Pathfinding Execution",
+        "desc": "Running heavy all-pairs shortest paths or multiple Dijkstra calls on dense real-world OSM maps causes high CPU usage. Solved by implementing the 2025 SSSP Breakthrough algorithm (with k-step Bellman-Ford and FindPivots frontier reduction) alongside an active query routing cache, achieving sub-5ms path computation."
+      },
+      {
+        "title": "Edge Inference on Resource-Constrained Hardware",
+        "desc": "Running YOLOv8 on edge nodes/traffic cameras caused high thermal throttling and frame drops. Resolved by using a quantized YOLOv8 nano model restricted to specific vehicle classes and downscaling video resolution, achieving stable 30+ FPS edge inference."
+      }
+    ],
+    "futureScope": [
+      "Integrate hardware-in-the-loop (HIL) traffic controllers using NTCIP protocols to test physical signal overrides.",
+      "Implement predictive traffic congestion using LSTM/GRU networks, forecasting bottlenecks 30 minutes in advance.",
+      "Support multi-vehicle corridor routing and cooperative green corridor scheduling to prevent ambulance-to-ambulance conflict at intersections."
+    ]
+  },
   bits: {
     subtitle: "A premium, local-first habit tracking and daily productivity mobile application designed to cultivate long-term consistency.",
     status: "Production Ready: Built • Tested",
