@@ -284,7 +284,7 @@ export const projectDetails = {
 
       role: "Lead Full Stack Flutter Developer",
 
-      teamSize: "2 Developers + 1 UI/UX Designer",
+      teamSize: "2 Developers",
 
       projectType: "Cross-Platform Mobile Application"
 

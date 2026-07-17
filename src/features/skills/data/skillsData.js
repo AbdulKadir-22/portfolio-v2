@@ -106,14 +106,7 @@ export const skillsData = [
       },
       { name: 'Java', icon: DiJava, color: '#ED8B00' },
       { name: 'Python', icon: SiPython, color: '#3776AB' },
-      { name: 'Django', icon: DiDjango, color: '#092E20' },
-      {
-        name: 'Flask',
-        icon: SiFlask,
-        color: '#000000',
-        lightColor: '#000000',
-        darkColor: '#FFFFFF'
-      },
+      { name: 'FastAPI', icon: null, color: '#000000' },
       { name: 'JWT Authentication', icon: null, color: '#000000' }
     ],
     featuredProjects: ['portyours', 'neargrab']
