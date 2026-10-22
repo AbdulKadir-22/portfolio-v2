@@ -24,19 +24,19 @@ export const contactConfig = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      url: "https://www.linkedin.com/in/abdul-kadir-shaikh-47ab9a357/",
+      url: "https://www.linkedin.com/in/abdulkadir-shaikh/",
       color: "blue",
     },
     {
       id: "twitter",
       label: "X (Twitter)",
-      url: "https://x.com",
+      url: "https://x.com/ariont_",
       color: "blue",
     },
     {
       id: "instagram",
       label: "Instagram",
-      url: "https://instagram.com/abdulkadir.java",
+      url: "https://instagram.com/abdulkadir.cpp",
       color: "gold",
     },
     {

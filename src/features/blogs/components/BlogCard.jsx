@@ -28,13 +28,38 @@ const BlogCard = ({ post, onBookmark, isBookmarked = false }) => {
         }
       `}
     >
-      {/* Thumbnail */}
-      <div className="flex-shrink-0 w-[100px] h-[80px] sm:w-[130px] sm:h-[100px] rounded-lg overflow-hidden">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+      {/* Thumbnail or Fallback Gradient Badge */}
+      <div className="flex-shrink-0 w-[100px] h-[80px] sm:w-[130px] sm:h-[100px] rounded-lg overflow-hidden flex items-center justify-center relative">
+        {post.image ? (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className={`w-full h-full flex flex-col items-center justify-center p-2 text-center transition-all duration-300 group-hover:scale-105 ${
+              isDark ? 'bg-white/[0.04]' : 'bg-slate-100/80'
+            }`}
+            style={{
+              borderLeft: `3px solid ${categoryColor}`,
+            }}
+          >
+            <span
+              className="text-[10px] font-bold tracking-wider uppercase line-clamp-2"
+              style={{ color: categoryColor }}
+            >
+              {categoryLabel}
+            </span>
+            <span
+              className={`text-[8px] tracking-widest uppercase mt-1 opacity-50 ${
+                isDark ? 'text-white' : 'text-slate-600'
+              }`}
+            >
+              Story
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Content */}
