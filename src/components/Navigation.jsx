@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import planetBase from '../assets/planet-base.png';
-import planetDark from '../assets/planet-dark.png';
+import planetBase from '../assets/planet-base.webp';
+import planetDark from '../assets/planet-dark.webp';
 
 const navItems = [
   { id: '01', label: 'BLOGS', subtext: 'Its Who I am', color: '#3b82f6', angle: -85, hue: 215 },

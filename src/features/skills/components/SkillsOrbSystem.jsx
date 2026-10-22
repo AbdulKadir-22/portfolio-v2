@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTheme } from '../../../context/ThemeContext';
 import { skillsData } from '../data/skillsData';
 import { siteContent } from '../../../data/content';
-import skillsCenterPlanet from '../../../assets/skills/skills.png';
+import skillsCenterPlanet from '../../../assets/skills/skills.webp';
 
 /**
  * SkillsOrbSystem — renders the astronomical orbits, central sun, and fanned-out planets.
@@ -84,7 +84,7 @@ const SkillsOrbSystem = ({ activeId, onSelectCategory }) => {
         />
       ))}
 
-      {/* ── Central Sun (skills.png) ── */}
+      {/* ── Central Sun (skills.webp) ── */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full z-30 flex flex-col items-center justify-center text-center pointer-events-none"
         style={{

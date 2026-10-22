@@ -1,6 +1,6 @@
 import { useTheme } from '../../../context/ThemeContext';
 import { featuredBook } from '../data/literatureData';
-import bookCover from '../../../assets/obsessed_book_cover.png';
+import bookCover from '../../../assets/obsessed_book_cover.webp';
 
 const FeaturedBook = () => {
   const { isDark } = useTheme();

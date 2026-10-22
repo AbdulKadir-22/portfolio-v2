@@ -70,7 +70,7 @@ const AllPaintingsPage = () => {
         <meta property="og:title" content="The Art Gallery — Abdulkadir Shaikh" />
         <meta property="og:description" content="Explore the traditional and digital artwork by Abdulkadir Shaikh. Acrylic and oil paintings, gouache studies, and sketches capturing cosmic aesthetics." />
         <meta property="og:url" content="https://abdulkadir.in/hobbies/paintings" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       
       {/* Back button and page title */}

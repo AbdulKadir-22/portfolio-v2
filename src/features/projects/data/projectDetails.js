@@ -2,27 +2,27 @@
  * Case Study Database for Portfolio Projects.
  * Centralizes deep technical information, metrics, highlights, and roadmap scopes.
  */
-import portfolio1 from '../Images/og-image.png'
-import portfolio2 from '../../../assets/projects/project-portfolio.png'
+import portfolio1 from '../Images/og-image.webp'
+import portfolio2 from '../../../assets/projects/project-portfolio.webp'
 
-import neargrab1 from '../Images/Neargrab1.png'
-import neargrab2 from '../Images/Neargrab2.png'
-import neargrab from '../Images/Neargrab.png'
+import neargrab1 from '../Images/Neargrab1.webp'
+import neargrab2 from '../Images/Neargrab2.webp'
+import neargrab from '../Images/Neargrab.webp'
 
-import amaal1 from '../Images/amaal/amaal1.png'
-import amaal2 from '../Images/amaal/amaal2.png'
+import amaal1 from '../Images/amaal/amaal1.webp'
+import amaal2 from '../Images/amaal/amaal2.webp'
 
-import bits1 from '../Images/bits/dashboard.jpeg'
-import bits2 from '../Images/bits/playstore.png'
-import bits3 from '../Images/bits/playstoress.png'
+import bits1 from '../Images/bits/dashboard.webp'
+import bits2 from '../Images/bits/playstore.webp'
+import bits3 from '../Images/bits/playstoress.webp'
 
-import portyours1 from '../Images/portyours/portfolio.png'
-import portyours2 from '../Images/portyours/portyours.png'
+import portyours1 from '../Images/portyours/portfolio.webp'
+import portyours2 from '../Images/portyours/portyours.webp'
 
-import pulse from '../Images/pulse/pulse.png'
-import pulse1 from '../Images/pulse/pulse1.png'
-import pulse2 from '../Images/pulse/pulse2.png'
-import pulse3 from '../Images/pulse/pulse3.png'
+import pulse from '../Images/pulse/pulse.webp'
+import pulse1 from '../Images/pulse/pulse1.webp'
+import pulse2 from '../Images/pulse/pulse2.webp'
+import pulse3 from '../Images/pulse/pulse3.webp'
 
 
 export const projectDetails = {

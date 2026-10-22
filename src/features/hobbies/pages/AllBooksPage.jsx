@@ -84,7 +84,7 @@ const AllBooksPage = () => {
         <meta property="og:title" content="The Library Vault — Abdulkadir Shaikh" />
         <meta property="og:description" content="Browse the complete list of books read by Abdulkadir Shaikh. Curated ratings, reviews, and insights across sci-fi, classics, biographies, and philosophy." />
         <meta property="og:url" content="https://abdulkadir.in/hobbies/books" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       
       {/* Back button and page title */}

@@ -9,9 +9,9 @@ import NowPlayingCard from './NowPlayingCard';
 import Footer from './Footer';
 import { siteContent } from '../../data/content';
 
-import lightBg from '../../assets/background/light-bg.png';
-import darkBg from '../../assets/background/dark-bg.png';
-import meteorImg from '../../assets/meteors/meteor.png';
+import lightBg from '../../assets/background/light-bg.webp';
+import darkBg from '../../assets/background/dark-bg.webp';
+import meteorImg from '../../assets/meteors/meteor.webp';
 
 /**
  * AppLayout — shared shell wrapping all pages.
@@ -44,7 +44,7 @@ const AppLayout = () => {
   useEffect(() => {
     const faviconLink = document.querySelector("link[rel~='icon']");
     if (faviconLink) {
-      faviconLink.href = isDark ? '/Logo-dark.png' : '/Logo-light.png';
+      faviconLink.href = isDark ? '/Logo-dark.webp' : '/Logo-light.webp';
     }
   }, [isDark]);
 

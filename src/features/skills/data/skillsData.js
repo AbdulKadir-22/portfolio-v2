@@ -41,11 +41,11 @@ import { DiJava,DiDjango} from 'react-icons/di';
 import { FaAws } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
 
-import frontendPlanet from '../../../assets/skills/frontend.png';
-import backendPlanet from '../../../assets/skills/Backend.png';
-import databasePlanet from '../../../assets/skills/Database.png';
-import aiPlanet from '../../../assets/skills/Locked.png';
-import toolsPlanet from '../../../assets/skills/tools.png';
+import frontendPlanet from '../../../assets/skills/frontend.webp';
+import backendPlanet from '../../../assets/skills/Backend.webp';
+import databasePlanet from '../../../assets/skills/Database.webp';
+import aiPlanet from '../../../assets/skills/Locked.webp';
+import toolsPlanet from '../../../assets/skills/tools.webp';
 
 export const skillsConfig = {
   pageTitle: 'My Skills',

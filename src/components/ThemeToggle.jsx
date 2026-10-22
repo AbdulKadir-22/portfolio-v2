@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       {/* Logo */}
       <div className={`w-8 h-8 rounded-full border overflow-hidden cursor-pointer transition-transform hover:scale-110 ${isDark ? 'border-white/20' : 'border-slate-200'}`}>
         <Link to="/" className="w-full h-full flex items-center justify-center">
-          <img src={isDark ? "/Logo-dark.png" : "/Logo-light.png"} alt="Logo" className="w-full h-full object-cover" />
+          <img src={isDark ? "/Logo-dark.webp" : "/Logo-light.webp"} alt="Logo" className="w-full h-full object-cover" />
         </Link>
       </div>
 

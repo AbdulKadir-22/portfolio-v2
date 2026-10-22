@@ -69,7 +69,7 @@ const AllMoviesPage = () => {
         <meta property="og:title" content="The Cinema Vault — Abdulkadir Shaikh" />
         <meta property="og:description" content="Explore Abdulkadir's favorite movies and television series. Ratings, tags, and quotes from cinematic masterpieces across genres." />
         <meta property="og:url" content="https://abdulkadir.in/hobbies/movies" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       
       {/* Back button and page title */}

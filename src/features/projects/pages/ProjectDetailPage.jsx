@@ -173,7 +173,7 @@ const ProjectDetailPage = () => {
   };
 
   const pageDescription = baseProject?.description || details?.subtitle || '';
-  const pageOgImage = baseProject?.image ? (baseProject.image.startsWith('http') ? baseProject.image : `https://abdulkadir.in${baseProject.image}`) : 'https://abdulkadir.in/og-image.png';
+  const pageOgImage = baseProject?.image ? (baseProject.image.startsWith('http') ? baseProject.image : `https://abdulkadir.in${baseProject.image}`) : 'https://abdulkadir.in/og-image.webp';
 
   return (
     <div

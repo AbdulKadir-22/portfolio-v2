@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import defaultJourneyBg from '../assets/journey-bg.png';
+import defaultJourneyBg from '../assets/journey-bg.webp';
 
 /**
  * JourneyCard — A premium, reusable card with a background image, gradient overlays,

@@ -54,7 +54,7 @@ const ProjectsPage = () => {
         <meta property="og:title" content="Projects — Abdulkadir Shaikh" />
         <meta property="og:description" content="12+ projects built with MERN, Flutter, React, and Node.js. From Neargrab — a hyperlocal shopkeeper platform — to the Ramzaan Amaal Tracker with 500+ active users." />
         <meta property="og:url" content="https://abdulkadir.in/projects" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">

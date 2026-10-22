@@ -21,7 +21,7 @@ const ContactPage = () => {
         <meta property="og:title" content="Contact — Abdulkadir Shaikh" />
         <meta property="og:description" content="Have a question, an idea, or want to collaborate? Contact Abdulkadir Shaikh directly via the contact form or connect on GitHub and LinkedIn." />
         <meta property="og:url" content="https://abdulkadir.in/contact" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">

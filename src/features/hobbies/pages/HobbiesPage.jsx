@@ -59,7 +59,7 @@ const HobbiesPage = () => {
         <meta property="og:title" content="Beyond the Code — Abdulkadir Shaikh" />
         <meta property="og:description" content="A curated collection of books, movies, and paintings that shape Abdulkadir's mindset, imagination and creative journey." />
         <meta property="og:url" content="https://abdulkadir.in/hobbies" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* ── Page Header (Centered globally) ── */}
       <header className="flex flex-col items-center mb-2 animate-fadeIn text-center">

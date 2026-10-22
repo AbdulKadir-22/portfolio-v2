@@ -11,7 +11,7 @@ import { blogPosts, categories, blogMarkdownMap } from '../data/config';
 import { parseFrontmatter, parseMarkdownBlocks, FormattedText } from '../utils/markdown';
 import { siteContent } from '../../../data/content';
 import { contactConfig } from '../../contact/data/config';
-import Logo from '../../../../public/Logo-light.png'
+import Logo from '../../../../public/Logo-light.webp'
 
 // Map icon names to Lucide icon components for custom struggle cards grid
 const struggleIconMap = {
@@ -220,7 +220,7 @@ const BlogDetailPage = () => {
   // ── Main Page Render ──
   const staticConfig = blogPosts.find((p) => p.id === id) || {};
   const excerpt = frontmatter.excerpt || staticConfig.excerpt || 'Read this story on Abdulkadir Shaikh\'s personal portfolio.';
-  const absoluteImageUrl = postMeta.image ? (postMeta.image.startsWith('http') ? postMeta.image : `https://abdulkadir.in${postMeta.image}`) : 'https://abdulkadir.in/og-image.png';
+  const absoluteImageUrl = postMeta.image ? (postMeta.image.startsWith('http') ? postMeta.image : `https://abdulkadir.in${postMeta.image}`) : 'https://abdulkadir.in/og-image.webp';
 
   const blogSchema = {
     "@context": "https://schema.org",

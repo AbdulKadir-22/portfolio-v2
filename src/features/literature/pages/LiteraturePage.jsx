@@ -7,7 +7,7 @@ import FeaturedBook from '../components/FeaturedBook';
 import CurrentlyWriting from '../components/CurrentlyWriting';
 import PoemsCarousel from '../components/PoemsCarousel';
 import QuotesCarousel from '../components/QuotesCarousel';
-import moonCloudsBg from '../../../assets/moon_clouds_bg.png';
+import moonCloudsBg from '../../../assets/moon_clouds_bg.webp';
 
 const LiteraturePage = () => {
   const { isDark } = useTheme();
@@ -24,7 +24,7 @@ const LiteraturePage = () => {
         <meta property="og:title" content="Literature Portfolio — Abdulkadir Shaikh" />
         <meta property="og:description" content="Read the creative and fiction writings of Abdulkadir Shaikh, writing under the pen name Ariont / Zeron. Explore featured novels, drafts, poems and essays." />
         <meta property="og:url" content="https://abdulkadir.in/literature" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* ── Page Header ── */}
       <header className="flex flex-col items-center mb-2 text-center animate-fadeIn select-none">

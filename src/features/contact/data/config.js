@@ -39,12 +39,6 @@ export const contactConfig = {
       url: "https://instagram.com/abdulkadir.cpp",
       color: "gold",
     },
-    {
-      id: "devto",
-      label: "Dev.to",
-      url: "https://dev.to",
-      color: "blue",
-    },
   ],
 
   quote: {

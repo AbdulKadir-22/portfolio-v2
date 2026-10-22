@@ -54,7 +54,7 @@ const ExperiencePage = () => {
         <meta property="og:title" content="Experience — Abdulkadir Shaikh" />
         <meta property="og:description" content="Professional journey of Abdulkadir Shaikh — Full Stack Developer Intern at Bloomr.world, Research Assistant at University of Cambridge Machine Learning Group, and more." />
         <meta property="og:url" content="https://abdulkadir.in/experience" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* ── Page Title ── */}
       <header className="flex items-center gap-4 mb-2">

@@ -96,7 +96,7 @@ const BlogsPage = () => {
         <meta property="og:title" content="My Blogs — Abdulkadir Shaikh" />
         <meta property="og:description" content="Thoughts, stories, and lessons from my journey as a developer and human being. Articles on technology, learning, mindset, and life." />
         <meta property="og:url" content="https://abdulkadir.in/blogs" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">

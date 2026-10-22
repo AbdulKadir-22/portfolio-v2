@@ -51,7 +51,7 @@ const Hero = () => {
         <meta property="og:title" content="Abdulkadir Shaikh — Full Stack Developer & Builder" />
         <meta property="og:description" content="I want to become sun who shines other, but am a meteor who only shines when he is falling. Explore the universe of Abdulkadir Shaikh — developer, writer, dreamer." />
         <meta property="og:url" content="https://abdulkadir.in/" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       <header className="mb-4">
         {names.map((name, i) => (

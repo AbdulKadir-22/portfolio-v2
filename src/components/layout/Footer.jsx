@@ -4,7 +4,7 @@ import { Orbit } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { contactConfig } from '../../features/contact/data/config';
 import { siteContent } from '../../data/content';
-import earthIcon from '../../assets/icons/earth.png';
+import earthIcon from '../../assets/icons/earth.webp';
 
 /**
  * Footer — Common website footer, positioned relative at the bottom of pages.

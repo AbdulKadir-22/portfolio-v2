@@ -1,7 +1,7 @@
 import { Mail, MapPin, Clock, Sparkles, ChevronRight } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
 import { contactConfig } from '../data/config';
-import radarBg from '../../../assets/background/contact-radar.png';
+import radarBg from '../../../assets/background/contact-radar.webp';
 
 const ContactInfo = () => {
   const { isDark } = useTheme();

@@ -44,7 +44,7 @@ const SkillsPage = () => {
         <meta property="og:title" content="Skills — Abdulkadir Shaikh" />
         <meta property="og:description" content="Full stack skills including JavaScript, React, Node.js, Flutter, MongoDB, PostgreSQL, Prisma, Docker, and more. 90%+ proficiency in the MERN stack." />
         <meta property="og:url" content="https://abdulkadir.in/skills" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* ── Page Header Title ── */}
       <header className="flex items-center gap-4 mb-2 select-none">

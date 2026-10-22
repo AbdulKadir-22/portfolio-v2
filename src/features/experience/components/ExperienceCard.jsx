@@ -1,6 +1,6 @@
 import { useTheme } from '../../../context/ThemeContext';
-import planetBase from '../../../assets/planet-dark.png';
-import planetDark from '../../../assets/planet-base.png';
+import planetBase from '../../../assets/planet-dark.webp';
+import planetDark from '../../../assets/planet-base.webp';
 
 // Planet hue colors for each experience card (cycles through these)
 const PLANET_HUES = [215, 285, 175, 42];

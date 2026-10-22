@@ -1,7 +1,7 @@
 import { MessageSquareCode } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
 import { contactConfig } from '../data/config';
-import spaceBg from '../../../assets/background/contact-space.png';
+import spaceBg from '../../../assets/background/contact-space.webp';
 
 const QuoteCard = () => {
   const { isDark } = useTheme();

@@ -42,7 +42,7 @@ const ResumePage = () => {
         <meta property="og:title" content="Resume — Abdulkadir Shaikh" />
         <meta property="og:description" content="Download the resume of Abdulkadir Shaikh — Full Stack Developer with expertise in MERN, Flutter, and scalable product development." />
         <meta property="og:url" content="https://abdulkadir.in/resume" />
-        <meta property="og:image" content="https://abdulkadir.in/og-image.png" />
+        <meta property="og:image" content="https://abdulkadir.in/og-image.webp" />
       </Helmet>
       {/* Page Title */}
       <header className="flex items-center gap-4 mb-2">

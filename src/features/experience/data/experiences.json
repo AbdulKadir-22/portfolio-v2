@@ -11,7 +11,7 @@
     "type": "Startup",
     "highlights": [
       "Built a hyperlocal product discovery platform bridging neighborhood customers with physical merchants.",
-      "Architected a decoupled MERN-equivalent stack with 125+ API routes across customer, shopkeeper, and admin domains.",
+      "Architected a decoupled PERN-equivalent stack with 125+ API routes across customer, shopkeeper, and admin domains.",
       "Shipped dynamic QR codes, GPS-based nearby search, and real-time shopkeeper dashboards."
     ],
     "techStack": [
@@ -100,9 +100,9 @@
     "role": "Project Lead & Full Stack Developer (Freelance)",
     "company": "Confidential Client (NDA)",
     "startDate": "May 2026",
-    "endDate": "Present",
-    "duration": "1+ Month",
-    "isCurrent": true,
+    "endDate": "September 2026",
+    "duration": "4+ Month",
+    "isCurrent": false,
     "location": "Remote",
     "type": "Freelance",
     "highlights": [
