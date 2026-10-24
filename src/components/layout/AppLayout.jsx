@@ -3,6 +3,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import ThemeToggle from '../ThemeToggle';
 import Navigation from '../Navigation';
+import MobilePlanetNav from '../MobilePlanetNav';
 import ResumeButton from './ResumeButton';
 import LiteratureButton from './LiteratureButton';
 import NowPlayingCard from './NowPlayingCard';
@@ -69,8 +70,13 @@ const AppLayout = () => {
       {/* ── Content Layer ── */}
       <div className="relative z-10 w-full h-screen overflow-y-auto">
         {/* Fixed UI Elements */}
-        <ThemeToggle />
-        <div className="fixed top-6 right-6 z-50 flex items-center gap-2.5 sm:gap-3">
+        {/* Desktop ThemeToggle (left) */}
+        <div className="hidden lg:block">
+          <ThemeToggle />
+        </div>
+
+        {/* Top Header Actions (Mobile: Resume on left, Planet trigger on right / Desktop: Resume on right) */}
+        <div className="fixed top-5 left-5 sm:top-6 sm:left-6 lg:left-auto lg:right-6 z-40 flex items-center gap-2.5 sm:gap-3">
           {/* <LiteratureButton /> */}
           <ResumeButton />
         </div>
@@ -106,17 +112,16 @@ const AppLayout = () => {
             </div>
           </div>
 
-          {/* Navigation (Mobile Floating Orb Menu) */}
+          {/* Navigation (Mobile Cosmic Planet Overlay Menu) */}
           <div className="lg:hidden">
-            <Navigation
-              theme={theme}
+            <MobilePlanetNav
               currentPage={currentPage}
               onPageChange={handlePageChange}
             />
           </div>
 
           {/* Page Content (via Outlet) — Aligned to start to prevent negative space shifting on mobile */}
-          <div className="relative z-10 w-full flex flex-col items-center justify-start lg:justify-center pt-36 pb-20 lg:pb-8 min-h-screen">
+          <div className="relative z-10 w-full flex flex-col items-center justify-start lg:justify-center pt-28 sm:pt-36 pb-20 lg:pb-8 min-h-screen">
             <Outlet />
           </div>
         </div>
