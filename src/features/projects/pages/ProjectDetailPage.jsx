@@ -47,7 +47,7 @@ const ProjectDetailPage = () => {
         "@type": "Person",
         "name": "Abdulkadir Shaikh"
       },
-      "url": baseProject.liveLink || `https://demo.shaikh.dev/${id}`,
+      "url": baseProject.liveLink || `https://demo.abdulkadir.in/${id}`,
       "applicationCategory": "WebApplication"
     };
   }, [id, baseProject, details]);

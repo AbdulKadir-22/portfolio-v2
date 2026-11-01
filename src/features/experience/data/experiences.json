@@ -55,6 +55,47 @@
     "icon": "rocket"
   },
   {
+    "id": "acm-amtics-webmaster",
+    "role": "Webmaster",
+    "company": "ACM AMTICS Student Chapter",
+    "startDate": "2025",
+    "endDate": "Present",
+    "duration": "1+ Year",
+    "isCurrent": true,
+    "location": "Surat, Gujarat, India",
+    "type": "Leadership & Community",
+    "highlights": [
+      "Managing and maintaining the official website of the ACM AMTICS Student Chapter.",
+      "Organized and hosted technical sessions, including an Open Source & Google Summer of Code session.",
+      "Contributed to organizing Engineering Day workshops with approximately 90 attendees."
+    ],
+    "techStack": [
+      "React",
+      "JavaScript",
+      "Web Development",
+      "Git"
+    ],
+    "responsibilities": [
+      "Maintaining and updating the student chapter website, including event announcements, academic resources, and chapter information.",
+      "Managing website content and ensuring structured access to resources for students.",
+      "Supporting technical events, workshops, and student engagement initiatives.",
+      "Collaborating with chapter leadership to maintain the chapter's digital presence."
+    ],
+    "tools": [
+      "React",
+      "JavaScript",
+      "Git",
+      "GitHub"
+    ],
+    "achievements": [
+      "Hosted an Open Source & Google Summer of Code awareness session.",
+      "Contributed to organizing an Engineering Day workshop attended by approximately 90 students.",
+      "Improved accessibility and organization of chapter resources through website maintenance."
+    ],
+    "icon": "globe"
+  },
+
+  {
     "id": "bloomr-fsd",
     "role": "Full Stack Developer Intern",
     "company": "Bloomr.world (IIT Madras Incubated)",

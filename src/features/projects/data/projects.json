@@ -11,8 +11,8 @@
       { "name": "FastAPI", "logo": "FASTAPI" },
       { "name": "Python", "logo": "PYTHON" }
     ],
-    "liveLink": "",
-    "githubLink": "https://github.com/AbdulKadir-22"
+    "liveLink": "https://github.com/AbdulKadir-22/pulse",
+    "githubLink": "https://github.com/AbdulKadir-22/pulse"
   },
   {
     "id": "neargrab",
@@ -28,6 +28,22 @@
     ],
     "liveLink": "https://neargrab.in",
     "githubLink": "https://github.com/NearGrab"
+  },
+  {
+    "id": "orbitbill",
+    "title": "OrbitBill",
+    "category": "fullstack",
+    "badge": "Full Stack",
+    "starred": true,
+    "description": "Enterprise-grade subscription management and recurring billing platform with dual-portal RBAC.",
+    "techStack": [
+      { "name": "React", "logo": "R" },
+      { "name": "Node.js", "logo": "NODE" },
+      { "name": "MongoDB", "logo": "MONGO" },
+      { "name": "Tailwind", "logo": "TW" }
+    ],
+    "liveLink": "https://github.com/Abdulkadir-22/Orbit-Bill",
+    "githubLink": "https://github.com/AbdulKadir-22/Orbit-Bill"
   },
   {
     "id": "ramazaanAmaal",

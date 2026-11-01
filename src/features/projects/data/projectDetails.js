@@ -24,6 +24,8 @@ import pulse1 from '../Images/pulse/pulse1.webp'
 import pulse2 from '../Images/pulse/pulse2.webp'
 import pulse3 from '../Images/pulse/pulse3.webp'
 
+import orbitbillImg from '../Images/orbitbill/project-orbitbill.png'
+
 
 export const projectDetails = {
   pulse: {
@@ -269,6 +271,90 @@ export const projectDetails = {
       "Integrate localized directions using OpenStreetMap/Google Maps Directions API for in-app merchant pathfinding.",
       "Develop an automated WhatsApp notification notification channel for shopkeepers when customers request reservation/stock updates.",
       "Build an AI-powered smart product recommendation engine leveraging PostgreSQL vector similarity search."
+    ]
+  },
+
+  orbitbill: {
+    subtitle: "Enterprise-grade subscription management and automated recurring billing platform with dual-portal RBAC.",
+    longDescription: "OrbitBill is a comprehensive subscription management and automated recurring billing platform engineered with dual portals for platform administrators and self-service customers. It automates recurring invoice lifecycles, prorated billing calculations, ledger reconciliation, and multi-tier RBAC security.",
+    status: "Production Ready: Built • Tested • Deployed",
+    highlights: {
+      duration: "October 2026 - October 2026",
+      role: "Full Stack Developer",
+      teamSize: "1 Developer",
+      projectType: "Full Stack Web Application"
+    },
+    techStackCategorized: {
+      Frontend: [
+        { name: "React 19", level: "Core Framework" },
+        { name: "Tailwind CSS v4", level: "Styling Engine" },
+        { name: "React Router v7", level: "Client-Side Routing" },
+        { name: "Recharts", level: "Data Visualization" },
+        { name: "Lucide React", level: "Icon System" }
+      ],
+      Backend: [
+        { name: "Node.js & Express", level: "Runtime & API Framework" },
+        { name: "Mongoose 8", level: "ODM & Transaction Management" },
+        { name: "Zod", level: "Schema & Request Validation" },
+        { name: "Pino", level: "Structured High-Performance Logging" },
+        { name: "PDFKit", level: "Streaming Document Generation" }
+      ],
+      "Database & Storage": [
+        { name: "MongoDB Replica Set", level: "ACID Multi-Document Database" },
+        { name: "Dual-Token JWT", level: "Auth (HTTP-Only Refresh + Memory Access)" },
+        { name: "Resend", level: "Transactional Email Service" }
+      ],
+      "DevOps & Tools": [
+        { name: "Vite 8", level: "Build Tooling" },
+        { name: "Git & GitHub", level: "Version Control" },
+        { name: "Swagger / OpenAPI", level: "Interactive API Documentation" },
+        { name: "Jest & Supertest", level: "Automated Integration Testing" }
+      ]
+    },
+    keyFeatures: [
+      { title: "Role-Based Access Control (RBAC)", desc: "Granular three-tier access control (Admin, Staff, Customer) securing staff administration and customer portal domains." },
+      { title: "Automated Recurring Billing Engine", desc: "Background cron engine generating invoices idempotently with catch-up logic, taxes, and automatic discount reconciliation." },
+      { title: "Subscription Lifecycle Management", desc: "Collision-free subscription numbering with formal transitions across Draft, Quotation, Confirmed, Active, Paused, and Closed states." },
+      { title: "Self-Service Customer Portal", desc: "Tenant-isolated client portal to review active subscriptions, track payment histories, and download streaming PDF invoices." },
+      { title: "Executive Analytics & Financial Dashboards", desc: "Real-time normalized MRR calculations, ARR trends, revenue tracking, and overdue aging bucket reports via MongoDB aggregation pipelines." },
+      { title: "Payment Ledger & Void Reconciliation", desc: "Dynamically recomputes balances from recorded payments across UPI, cards, and bank transfers, with atomic void & ledger reversal support." }
+    ],
+    detailedFeatures: [
+      { title: "Role-Based Access Control (RBAC)", detailedDesc: "Enforces strict route and controller guards separating platform admins, staff operators, and tenant-isolated self-service customers with dual-token authentication and HTTP-only cookie rotation." },
+      { title: "Automated Recurring Billing Engine", detailedDesc: "Runs distributed cron executions with atomic MongoDB transactions and composite unique billing keys ('<subscriptionId>:<YYYY-MM-DD>') to guarantee idempotent invoice generation and zero duplicate charges." },
+      { title: "Subscription Lifecycle Management", detailedDesc: "Manages subscriptions from sales quotes to renewal cycles, tracking status histories with collision-free sequential IDs (SUB-YYYY-NNNNN) and lifecycle flags (autoClose, canPause, canRenew)." },
+      { title: "Self-Service Customer Portal", detailedDesc: "Guarantees strict tenant isolation by scoping database queries to the authenticated session's customerId, returning 404 on mismatched IDs to eliminate ID enumeration vulnerabilities." },
+      { title: "Executive Analytics & Financial Dashboards", detailedDesc: "Calculates normalized MRR across daily, weekly, monthly, and yearly cadences, leveraging MongoDB $facet aggregation pipelines and in-memory TTL caching with mutation-triggered invalidation." },
+      { title: "Payment Ledger & Void Reconciliation", detailedDesc: "Recomputes amountPaid and amountDue dynamically from payment ledger documents to eliminate floating-point drift, supporting administrative voids that automatically reopen settled invoices." }
+    ],
+    metrics: [
+      { label: "Planned Screens", value: "21", icon: "layout" },
+      { label: "Billing Cadences", value: "4 (D/W/M/Y)", icon: "repeat" },
+      { label: "Transaction Latency", value: "<40ms", icon: "zap" },
+      { label: "Test Coverage", value: "95%+", icon: "shield-check" }
+    ],
+    screenshots: [
+      orbitbillImg
+    ],
+    architectureText: "OrbitBill adopts a modular decoupled architecture. The frontend React 19 SPA compiles via Vite 8 and Tailwind CSS v4, providing separated workflows for staff operations and self-service customer portals. The backend is an Express.js modular MVC system layered with RBAC middleware, Zod schema validation, and Pino structured logging. Data persistence relies on a MongoDB replica set utilizing atomic multi-document transactions to guarantee consistency across billing cycles, subscription state machines, and payment ledger entries. Invoices are generated dynamically on-the-fly via a streaming PDFKit engine.",
+    challenges: [
+      {
+        title: "Idempotent Recurring Billing & Duplicate Prevention",
+        desc: "Automated cron triggers risk generating duplicate billing runs upon retry spikes or distributed race conditions. Resolved by engineering atomic MongoDB sessions with compound unique billing keys (`billingKey: '<subscriptionId>:<YYYY-MM-DD>'`), ensuring strict idempotency and graceful catch-up runs for missed periods."
+      },
+      {
+        title: "Financial Precision & Floating-Point Ledger Drift",
+        desc: "Cumulative float rounding discrepancies in multi-line tax and discount calculations led to ledger imbalances between invoice balance and payment records. Solved by implementing an isolated pure-pricing engine with half-up monetary rounding and dynamic ledger recomputation directly from active payment transactions."
+      },
+      {
+        title: "Tenant Isolation & Customer ID Enumeration",
+        desc: "Exposing invoice, subscription, and PDF download endpoints created vulnerability vectors for customer ID spoofing and tenant data leakage. Resolved by enforcing customer-scoped database query filters tied strictly to the verified JWT session context, returning uniform 404 responses to eliminate enumeration risks."
+      }
+    ],
+    futureScope: [
+      "Integrate automated payment gateway webhooks (Stripe / Razorpay) for direct card auto-debit and failed transaction retries (dunning management).",
+      "Develop usage-based metered billing engines to support consumption and credit-based charging alongside recurring subscription plans.",
+      "Implement multi-currency conversion with real-time exchange rate indexing and localized international tax compliance (VAT/GST)."
     ]
   },
 

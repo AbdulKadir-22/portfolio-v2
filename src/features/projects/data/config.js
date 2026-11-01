@@ -7,6 +7,7 @@ import portyoursImg from '../Images/portyours/portyours.webp';
 import amaal2 from '../Images/amaal/amaal2.webp';
 import bitsImg from '../Images/bits/dashboard.webp';
 import pulseImg from '../Images/pulse/pulse.webp';
+import orbitbillImg from '../Images/orbitbill/project-orbitbill.png'
 
 // Map image assets to project ids
 const imageMapping = {
@@ -16,6 +17,7 @@ const imageMapping = {
   ramazaanAmaal: amaal2,
   portyours: portyoursImg,
   bits: bitsImg,
+  orbitbill: orbitbillImg,
 };
 
 // Merge JSON projects with actual imported images
